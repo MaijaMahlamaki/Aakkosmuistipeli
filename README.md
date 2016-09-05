@@ -1,0 +1,2 @@
+# Aakkosmuistipeli
+Ohjelmoinnin harjoitustyö
