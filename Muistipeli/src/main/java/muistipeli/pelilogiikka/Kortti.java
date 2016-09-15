@@ -10,6 +10,7 @@ package muistipeli.pelilogiikka;
  * @author mahlamai
  */
 public class Kortti {
+
     private String kirjain;
 
     public Kortti(String kirjain) {
@@ -19,6 +20,5 @@ public class Kortti {
     public String getKirjain() {
         return kirjain;
     }
-    
-    
+
 }

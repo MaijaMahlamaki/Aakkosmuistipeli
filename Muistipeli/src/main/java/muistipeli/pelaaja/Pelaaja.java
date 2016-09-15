@@ -10,6 +10,7 @@ package muistipeli.pelaaja;
  * @author mahlamai
  */
 public class Pelaaja {
+
     private String nimi;
     private int pisteet;
 
@@ -25,10 +26,9 @@ public class Pelaaja {
     public int getPisteet() {
         return pisteet;
     }
-    
+
     public void kirjaaPisteet(int pisteet) {
         this.pisteet = this.pisteet + pisteet;
     }
-    
-    
+
 }
