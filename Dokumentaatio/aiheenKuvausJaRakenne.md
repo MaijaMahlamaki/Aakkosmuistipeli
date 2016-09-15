@@ -17,3 +17,5 @@ parin löytämisestä saisi kaksi pistettä ja väärän parin kääntämisestä
 * Halutessaan pelaaja voi aloittaa uuden pelin edellisen päätyttyä.
 * Jos pelaaja pelaa saman session aikana useamman pelin, hän voi tarkastella niiden pisteitä
 kootusti (pisteet eivät kuitenkaan tallennu pysyvästi, vaan ne katoavat, kun peli suljetaan).
+
+![Luokkakaavio][http://yuml.me/0f6b295f]
