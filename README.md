@@ -11,4 +11,4 @@ Pistelasku toimii niin, että löydetystä parista saa aina kaksi pistettä,
 [Tuntikirjanpito](Dokumentaatio/tuntikirjanpito.md)
 
 ##Luokkakaavio
-[Luokkakaavio][http://yuml.me/619a23cc]
+[Luokkakaavio](http://yuml.me/619a23cc "Luokkakaavio")
