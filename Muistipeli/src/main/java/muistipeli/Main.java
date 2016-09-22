@@ -20,11 +20,10 @@ public class Main {
 //        Scanner lukija = new Scanner(System.in);
 //        Kayttoliittyma kayttis = new Kayttoliittyma(lukija);
 //        kayttis.kaynnista();
-        
-       // Graafinen käyttöliittymä on juuri nyt työn alla.
-        
-        Graafinenkayttoliittyma Gkayttis = new Graafinenkayttoliittyma();
-         SwingUtilities.invokeLater(Gkayttis);
+
+        // Graafinen käyttöliittymä on juuri nyt työn alla.
+        Graafinenkayttoliittyma gkayttis = new Graafinenkayttoliittyma();
+        SwingUtilities.invokeLater(gkayttis);
     }
 
 }

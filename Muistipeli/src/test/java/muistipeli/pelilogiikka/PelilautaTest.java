@@ -79,4 +79,5 @@ public class PelilautaTest {
         assertEquals("x", pelilauta.kortinKirjain(1));
 
     }
+    
 }

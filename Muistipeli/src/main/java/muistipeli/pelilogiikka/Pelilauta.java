@@ -54,17 +54,16 @@ public class Pelilauta {
     }
 
     public void poistaKortit(int kortti1, int kortti2) {
-            this.kortit.set(kortti1, new Kortti("x"));
-            this.kortit.set(kortti2, new Kortti("x"));
+        this.kortit.set(kortti1, new Kortti("x"));
+        this.kortit.set(kortti2, new Kortti("x"));
     }
 
     public int korttienLkm() {
         return this.kortit.size();
     }
-    
+
     public ArrayList getKortit() {
         return this.kortit;
     }
-    
 
 }

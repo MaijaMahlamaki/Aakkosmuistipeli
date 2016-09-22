@@ -63,8 +63,8 @@ public class Muistipeli {
     }
 
     //Apumetodi pelaajan lopullisen pistesaldon näyttämiseen
-    public void getPisteet(Pelaaja pelaaja) {
-        pelaaja.getPisteet();
+    public int getPisteet(Pelaaja pelaaja) {
+        return pelaaja.getPisteet();
     }
 
     //Parin löytymisen yhteydessä käytettävä apumetodi: 

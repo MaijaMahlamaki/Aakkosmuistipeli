@@ -11,4 +11,6 @@ ja "hudista" yhden miinuspisteen.
 [Tuntikirjanpito](Dokumentaatio/tuntikirjanpito.md)
 
 ##Luokkakaavio
-![Luokkakaavio](http://yuml.me/619a23cc "Luokkakaavio")
+![Luokkakaavio](http://yuml.me/diagram/scruffy/class/draw "Luokkakaavio")
+
+
