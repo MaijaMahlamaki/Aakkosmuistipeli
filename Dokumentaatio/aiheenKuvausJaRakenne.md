@@ -30,5 +30,8 @@ Kun peli alkaa, pelaaja näkee näytön yläreunassa ohjeet.
 Kun pelaaja klikkaa kahta korttia, yläreunan näkymässä näkyy mitkä kortit hän avasi
 ja onnistuiko löytämään parit vai ei. Jos parit eivät löytyneet, peli jatkuu.
 Jos taas parit löytyivät, kyseiset kortit muuttuvat harmaiksi, eikä niitä voi enää klikata.
+
 Seuraavaksi toteutusvuorossa ovat pistelasku, pelaajan nimen kirjoittaminen näytölle niin,
 että se ja pisteet näkyvät koko pelin ajan, sekä uuden pelin aloittaminen edellisen perään.
+
+Testikattavuutta on myös tarkoitus parantaa ensi viikolla pelilogiikkatestein.
