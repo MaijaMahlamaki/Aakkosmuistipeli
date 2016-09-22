@@ -14,7 +14,7 @@ import java.util.Collections;
  */
 public class Pelilauta {
 
-    private ArrayList kortit;
+    private ArrayList<Kortti> kortit;
 
     public Pelilauta() {
         this.kortit = new ArrayList<Kortti>();
@@ -46,24 +46,25 @@ public class Pelilauta {
 
     }
 
-    public String getKirjain(int index) {
-        Kortti kortti = (Kortti) this.kortit.get(index);
-        return kortti.getKirjain();
+    public String kortinKirjain(int index) {
+        Object k = this.kortit.get(index);
+        Kortti kortti = (Kortti) k;
+        String kirjain = (String) kortti.getKirjain();
+        return kirjain;
     }
 
     public void poistaKortit(int kortti1, int kortti2) {
-        if (kortti1 > kortti2) {
-            this.kortit.remove(kortti1);
-            this.kortit.remove(kortti2);
-        } else {
-            this.kortit.remove(kortti2);
-            this.kortit.remove(kortti1);
-        }
-
+            this.kortit.set(kortti1, new Kortti("x"));
+            this.kortit.set(kortti2, new Kortti("x"));
     }
 
     public int korttienLkm() {
         return this.kortit.size();
     }
+    
+    public ArrayList getKortit() {
+        return this.kortit;
+    }
+    
 
 }

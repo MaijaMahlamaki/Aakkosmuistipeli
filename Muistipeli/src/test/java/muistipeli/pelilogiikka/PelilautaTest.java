@@ -47,8 +47,8 @@ public class PelilautaTest {
     public void getKirjainToimiiOikein() {
         pelilauta.luoKortit();
 
-        assertEquals("a", pelilauta.getKirjain(0));
-        assertEquals("h", pelilauta.getKirjain(15));
+        assertEquals("a", pelilauta.kortinKirjain(0));
+        assertEquals("h", pelilauta.kortinKirjain(15));
 
     }
 
@@ -65,10 +65,8 @@ public class PelilautaTest {
         pelilauta.luoKortit();
 
         pelilauta.poistaKortit(0, 1);
-        assertEquals(14, pelilauta.korttienLkm());
+        assertEquals(16, pelilauta.korttienLkm());
 
-        pelilauta.poistaKortit(0, 1);
-        assertEquals(12, pelilauta.korttienLkm());
 
     }
 
@@ -77,12 +75,8 @@ public class PelilautaTest {
         pelilauta.luoKortit();
 
         pelilauta.poistaKortit(0, 1);
-        assertEquals("c", pelilauta.getKirjain(0));
-        assertEquals("d", pelilauta.getKirjain(1));
-
-        pelilauta.poistaKortit(12, 13);
-        assertEquals("e", pelilauta.getKirjain(10));
-        assertEquals("f", pelilauta.getKirjain(11));
+        assertEquals("x", pelilauta.kortinKirjain(0));
+        assertEquals("x", pelilauta.kortinKirjain(1));
 
     }
 }

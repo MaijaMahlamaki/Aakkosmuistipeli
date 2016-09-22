@@ -5,6 +5,7 @@
  */
 package muistipeli.pelilogiikka;
 
+import java.util.ArrayList;
 import muistipeli.pelaaja.Pelaaja;
 
 /**
@@ -33,22 +34,24 @@ public class Muistipeli {
 
     //Parametreina käännettävien korttien indeksit, ja metodi palauttaa true, mikäli löytyi pari
     public boolean kaannaKortit(int kortti1, int kortti2) {
-        if (this.pelilauta.getKirjain(kortti1).equals(this.pelilauta.getKirjain(kortti2))) {
+        if (this.pelilauta.kortinKirjain(kortti1).equals("x")
+                && this.pelilauta.kortinKirjain(kortti2).equals("x")
+                || !this.pelilauta.kortinKirjain(kortti1).equals(this.pelilauta.kortinKirjain(kortti2))) {
+            this.pelaaja.kirjaaPisteet(-1);
+            return false;
+
+        } else {
             this.pelaaja.kirjaaPisteet(2);
             this.pelilauta.poistaKortit(kortti1, kortti2);
             return true;
-        } else {
-            this.pelaaja.kirjaaPisteet(-1);
-            return false;
         }
 
     }
 
     //Metodi kertoo, mitkä kortit avattiin, jotta ne voi näyttää palaajalle
     public String naytaKortit(int kortti1, int kortti2) {
-        String kortit = kortti1 + "=" + this.pelilauta.getKirjain(kortti1)
-                + " ja "
-                + kortti2 + "=" + this.pelilauta.getKirjain(kortti2);
+        String kortit = this.pelilauta.kortinKirjain(kortti1)
+                + " ja " + this.pelilauta.kortinKirjain(kortti2);
 
         return kortit;
 
@@ -69,9 +72,10 @@ public class Muistipeli {
     public void poistaKortit(int kortti1, int kortti2) {
         this.pelilauta.poistaKortit(kortti1, kortti2);
     }
-    
-    public Pelilauta getPelilauta() {
-        return this.getPelilauta();
+
+    public ArrayList getKortit() {
+        ArrayList<Kortti> kortit = this.pelilauta.getKortit();
+        return kortit;
     }
 
 }

@@ -18,7 +18,7 @@ public class Kortti {
     }
 
     public String getKirjain() {
-        return kirjain;
+        return this.kirjain;
     }
 
 }
