@@ -31,7 +31,7 @@ public class Muistipeli {
         return pelilauta.korttienLkm();
     }
 
-    //Parametreina käännettävät kortit, ja metodi palauttaa true, mikäli löytyi pari
+    //Parametreina käännettävien korttien indeksit, ja metodi palauttaa true, mikäli löytyi pari
     public boolean kaannaKortit(int kortti1, int kortti2) {
         if (this.pelilauta.getKirjain(kortti1).equals(this.pelilauta.getKirjain(kortti2))) {
             this.pelaaja.kirjaaPisteet(2);
@@ -68,6 +68,10 @@ public class Muistipeli {
     //korttien poistaminen pelilaudalta
     public void poistaKortit(int kortti1, int kortti2) {
         this.pelilauta.poistaKortit(kortti1, kortti2);
+    }
+    
+    public Pelilauta getPelilauta() {
+        return this.getPelilauta();
     }
 
 }

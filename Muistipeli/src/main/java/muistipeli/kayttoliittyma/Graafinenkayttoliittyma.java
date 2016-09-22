@@ -9,6 +9,7 @@ import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.util.HashMap;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -28,6 +29,7 @@ import muistipeli.pelilogiikka.Pelilauta;
 public class Graafinenkayttoliittyma implements Runnable {
 
     private JFrame frame;
+    private HashMap kortit;
 
     public Graafinenkayttoliittyma() {
     }

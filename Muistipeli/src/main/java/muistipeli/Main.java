@@ -6,6 +6,8 @@
 package muistipeli;
 
 import java.util.Scanner;
+import javax.swing.SwingUtilities;
+import muistipeli.kayttoliittyma.Graafinenkayttoliittyma;
 import muistipeli.kayttoliittyma.Kayttoliittyma;
 
 /**
@@ -15,9 +17,14 @@ import muistipeli.kayttoliittyma.Kayttoliittyma;
 public class Main {
 
     public static void main(String[] args) {
-        Scanner lukija = new Scanner(System.in);
-        Kayttoliittyma kayttis = new Kayttoliittyma(lukija);
-        kayttis.kaynnista();
+//        Scanner lukija = new Scanner(System.in);
+//        Kayttoliittyma kayttis = new Kayttoliittyma(lukija);
+//        kayttis.kaynnista();
+        
+       // Graafinen käyttöliittymä on juuri nyt työn alla.
+        
+        Graafinenkayttoliittyma Gkayttis = new Graafinenkayttoliittyma();
+         SwingUtilities.invokeLater(Gkayttis);
     }
 
 }
