@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package muistipeli.pelilogiikka;
 
 import muistipeli.pelaaja.Pelaaja;
@@ -15,7 +10,7 @@ import org.junit.BeforeClass;
 
 /**
  *
- * @author mahlamai
+ *
  */
 public class KorttiTest {
 
@@ -48,7 +43,7 @@ public class KorttiTest {
     }
 
     @Test
-    public void getKirjainToimiiOikein() {
+    public void getKirjainPalauttaaOikeanKirjaimen() {
         assertEquals("a", kortti.getKirjain());
     }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="muistipeli.pelilogiikka.MuistipeliTest" time="0.002" errors="0" skipped="0">
+<testsuite tests="25" failures="0" name="muistipeli.pelilogiikka.MuistipeliTest" time="0.033" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -43,7 +43,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="/usr/lib/jvm/java-8-openjdk-amd64/jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=/home/mahlamai/.netbeans/8.0/maven-nblib/netbeans-eventspy.jar clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=/home/mahlamai/.netbeans/8.0/maven-nblib/netbeans-eventspy.jar test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="user.language.format" value="fi"/>
@@ -62,8 +62,29 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="pisteetLasketaanOikeinMiinusYkkosilla" time="0.001"/>
-  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="pisteetLasketaanOikeinKakkosella" time="0"/>
-  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="pisteetLasketaanOikeinKakkosillaJaMiinusYkkosilla" time="0.001"/>
-  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="testSomeMethod" time="0"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kaannaKortitKirjaaBonusPisteet2p" time="0"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="naytaKortitNayttaaEriParisetKortitOikein" time="0.002"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="peliLoppuPalauttaaTrueJosKaikkiParitLoydetty" time="0"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kaannaKortitKirjaaMiinusPisteenHudista" time="0"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="pelinAloitusLuoOikeanMaaranKortteja" time="0.001"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="peliLoppuPalauttaaFalseJosPeliKesken" time="0.001"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kaannaKortitKirjaaBonusPisteetKunMiinusPisteitaJaBonusPisteitaUseita" time="0"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kaannaKortitPalauttaaTrueJosPariLoytyi" time="0.001"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kaannaKortitPoistaaOikeatKortit" time="0.001"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kirjaaPisteetKirjaaOikeinMiinusYkkosilla" time="0"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kaannaKortitPalauttaaFalseJosPariaEiLoytynyt" time="0.001"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kirjaaPisteetKirjaaOikeinKakkosella" time="0.001"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kaannaKortitKirjaaBonusPisteetKunBonusPisteitaUseita" time="0"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kaannaKortitVahentaaParienLkmJosUseaPariLoytyi" time="0.001"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="naytaKortitNayttaaParinOikein" time="0"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kaannaKortitVahentaaParienLkmJosPariLoytyi" time="0.002"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="bonusPisteetLisataanKokonaispisteisiinOikeinKunUseitaJaMiinusta" time="0"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kirjaaPisteetKirjaaOikeinBonusPisteetKun2p" time="0"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kaannaKortitEiVahennaParienLkmJosPariaEiLoytynyt" time="0"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kaannaKortitKirjaaPisteenParista" time="0"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="naytaKortitNayttaaJoLoydetynParinOikein" time="0"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kirjaaPisteetKirjaaOikeinKakkosillaJaMiinusYkkosilla" time="0"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kaannaKortitPalauttaaFalseJosParitJoLoydetty" time="0.001"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kaannaKortitVahentaaParienLkmOikeinUseallaKaannolla" time="0"/>
+  <testcase classname="muistipeli.pelilogiikka.MuistipeliTest" name="kirjaaPisteetKirjaaOikeinBonusPisteetKunUseita" time="0.001"/>
 </testsuite>

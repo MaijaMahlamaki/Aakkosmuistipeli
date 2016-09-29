@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package muistipeli.pelilogiikka;
 
 import java.util.ArrayList;
@@ -44,7 +39,15 @@ public class PelilautaTest {
     }
 
     @Test
-    public void getKirjainToimiiOikein() {
+    public void luoKortitLuoOikeanMaaranKortteja() {
+        pelilauta.luoKortit();
+
+        assertEquals(16, pelilauta.korttienLkm());
+
+    }
+
+    @Test
+    public void getKirjainPalauttaaOikeanKirjaimen() {
         pelilauta.luoKortit();
 
         assertEquals("a", pelilauta.kortinKirjain(0));
@@ -67,17 +70,16 @@ public class PelilautaTest {
         pelilauta.poistaKortit(0, 1);
         assertEquals(16, pelilauta.korttienLkm());
 
-
     }
 
     @Test
     public void korttienPoistoPoistaaPelilaudaltaOikeatKortit() {
         pelilauta.luoKortit();
-
         pelilauta.poistaKortit(0, 1);
+
         assertEquals("x", pelilauta.kortinKirjain(0));
         assertEquals("x", pelilauta.kortinKirjain(1));
 
     }
-    
+
 }

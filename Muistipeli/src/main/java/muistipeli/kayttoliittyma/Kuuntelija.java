@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package muistipeli.kayttoliittyma;
 
 import java.awt.GridLayout;
@@ -18,8 +13,9 @@ import muistipeli.pelilogiikka.Muistipeli;
 import muistipeli.pelilogiikka.Pelilauta;
 
 /**
+ * Luokka kuuntelee graafisen käyttöliittymän tapahtumia sekä välittää viestejä
+ * käyttäjältä pelilogiikalle ja pelilogiikalta takaisin käyttäjälle.
  *
- * @author mahlamai
  */
 public class Kuuntelija implements ActionListener {
 
@@ -61,7 +57,7 @@ public class Kuuntelija implements ActionListener {
             teksti.setText("Pelaaja: " + pelaaja.getNimi()
                     + "\nPisteet: " + pelaaja.getPisteet()
                     + "\n\nAloita peli valitsemalla kaksi korttia.");
-            
+
         } else {
 
             klikkaukset++;
@@ -115,7 +111,7 @@ public class Kuuntelija implements ActionListener {
                     teksti.setText(pelaaja.loppuViesti());
 //                    ylaosa.add(teksti);
 //                    ylaosa.add(uusiPeli);
-                    
+
                 }
             }
 

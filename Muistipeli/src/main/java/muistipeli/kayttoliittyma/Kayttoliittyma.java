@@ -11,8 +11,8 @@ import muistipeli.pelilogiikka.Muistipeli;
 import muistipeli.pelilogiikka.Pelilauta;
 
 /**
- *
- * @author mahlamai
+ * Luokka tarjoaa tekstikäyttöliittymän toiminnallisuuden.
+ * 
  */
 public class Kayttoliittyma {
 

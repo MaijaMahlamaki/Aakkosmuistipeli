@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package muistipeli.pelaaja;
 
 import org.junit.After;
@@ -14,7 +9,7 @@ import org.junit.BeforeClass;
 
 /**
  *
- * @author mahlamai
+ *
  */
 public class PelaajaTest {
 
@@ -82,7 +77,7 @@ public class PelaajaTest {
     }
 
     @Test
-    public void getPisteetToimiiMolemmillaLuvuilla() {
+    public void kirjaaPisteetToimiiMolemmillaLuvuilla() {
         pelaaja.kirjaaPisteet(2);
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(2);
@@ -90,6 +85,74 @@ public class PelaajaTest {
         pelaaja.kirjaaPisteet(2);
 
         assertEquals(4, pelaaja.getPisteet());
+
+    }
+
+    @Test
+    public void kirjaaPisteetKirjaaBonusPisteetKahdellaPerakkaisellaParilla() {
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+
+        assertEquals(6, pelaaja.getPisteet());
+
+    }
+
+    @Test
+    public void kirjaaPisteetKirjaaBonusPisteetUseallaPerakkaisellaParilla() {
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+
+        assertEquals(14, pelaaja.getPisteet());
+
+    }
+
+    @Test
+    public void kirjaaPisteetKirjaaBonusPisteetOikeinJosValissaOnMiinus() {
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+
+        assertEquals(11, pelaaja.getPisteet());
+
+    }
+
+    @Test
+    public void bonusPisteidenSummaPalautetaanOikeinJosNolla() {
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+
+        assertEquals(0, pelaaja.bonuspisteet());
+
+    }
+
+    @Test
+    public void bonusPisteidenSummaPalautetaanOikeinJosKaksi() {
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+
+        assertEquals(2, pelaaja.bonuspisteet());
+
+    }
+
+    @Test
+    public void bonusPisteidenSummaPalautetaanOikeinJosSuuri() {
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+
+        assertEquals(8, pelaaja.bonuspisteet());
 
     }
 

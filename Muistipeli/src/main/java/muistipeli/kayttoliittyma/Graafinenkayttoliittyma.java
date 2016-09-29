@@ -1,4 +1,3 @@
-
 package muistipeli.kayttoliittyma;
 
 import java.awt.BorderLayout;
@@ -21,8 +20,10 @@ import muistipeli.pelilogiikka.Muistipeli;
 import muistipeli.pelilogiikka.Pelilauta;
 
 /**
+ * Luokka kokoaa graafisen käyttöliittymän muistipelille. Käyttöliittymän
+ * ylälaidassa on infoa käyttäjälle näyttävä paneeli ja sen alla 4x4 pelilauta,
+ * joka koostuu korteista.
  *
- * 
  */
 public class Graafinenkayttoliittyma implements Runnable {
 
@@ -41,7 +42,6 @@ public class Graafinenkayttoliittyma implements Runnable {
 
 //        this.muistipeli = new Muistipeli(new Pelaaja("pelaaja"));
 //        muistipeli.aloitaPeli();
-
         luoKomponentit(frame.getContentPane());
 
         frame.pack();
@@ -52,17 +52,14 @@ public class Graafinenkayttoliittyma implements Runnable {
     private void luoKomponentit(Container container) {
 
         JPanel peli = new JPanel();
-        
 
-        BorderLayout layout = new BorderLayout();       
+        BorderLayout layout = new BorderLayout();
         container.setLayout(layout);
-        
-        JPanel ylaosa = new JPanel(new GridLayout(1,3));
-        
-        
+
+        JPanel ylaosa = new JPanel(new GridLayout(1, 3));
+
         container.add(ylaosa, BorderLayout.NORTH);
-        
-        
+
         JTextArea teksti = new JTextArea("Tervetuloa pelaamaan muistipeliä!"
                 + "\nAloita kirjoittamalla nimesi viereiseen kenttään"
                 + "\nja klikkaa sitten aloituspainiketta."
@@ -73,21 +70,21 @@ public class Graafinenkayttoliittyma implements Runnable {
                 + "\nJos onnistut löytämään kaksi paria peräkkäin,"
                 + "\nsaat kaksi bonuspistettä!");
         JTextField nimi = new JTextField();
-        JButton pelaajanLisays = new JButton("Aloita peli"); 
+        JButton pelaajanLisays = new JButton("Aloita peli");
         pelaajanLisays.setActionCommand("100");
-        
+
         ylaosa.add(teksti);
         ylaosa.add(nimi);
         ylaosa.add(pelaajanLisays);
 
         JPanel panel = new JPanel(new GridLayout(4, 4));
 
-        /*Tässä luodaan pelilauta: kortteja on 16. 
-         Kortit luodaan yksitellen niin, että jokaisessa napissa on teksti x, 
-         mutta action command on luku väliltä 0-15. 
-         Kirjaimet on talletettu pelilaudan arraylistiin, ja parien tarkistus 
-         tapahtuu sitä kautta, ja napeissa on action commandina korttia vastaava 
-         indeksi. Parien tarkistus tapahtuu pelilogiikassa.
+        /*Alla luodaan pelilauta, jossa kortteja on 16. 
+         Kortit luodaan yksitellen niin, että jokaisessa kortissa/napissa on 
+         käyttäjälle näkyvä teksti x, mutta action command on luku väliltä 0-15. 
+         Napeissa on action commandina korttia vastaava 
+         indeksi. Kutakin indeksiä vastaavat kirjaimet on talletettu pelilaudan 
+         arraylistiin ja parien tarkistus tapahtuu pelilogiikassa.       
          */
         JButton k0 = new JButton("X");
         k0.setActionCommand("0");
@@ -140,10 +137,9 @@ public class Graafinenkayttoliittyma implements Runnable {
         k13.addActionListener(kuuntelija);
         k14.addActionListener(kuuntelija);
         k15.addActionListener(kuuntelija);
-        
+
         nimi.addActionListener(kuuntelija);
         pelaajanLisays.addActionListener(kuuntelija);
-        
 
         panel.add(k0);
         panel.add(k1);
