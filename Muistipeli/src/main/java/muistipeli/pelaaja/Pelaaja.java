@@ -84,14 +84,14 @@ public class Pelaaja {
         if (pisteet <= 0 && bonuspisteet > 0) {
             viesti = "Hyvä " + nimi + ", löysit kaikki parit!"
                     + "\nPistesaldosi ei tällä kertaa ihan yltänyt plussan puolelle, sait yhteensä "
-                    + pisteet + "pistettä."
+                    + pisteet + " pistettä."
                     + "\nKeräsit kuitenkin hienot " + bonuspisteet
                     + " bonuspistettä!";
         }
         if (pisteet <= 0 && bonuspisteet == 0) {
             viesti = "Hyvä " + nimi + ", löysit kaikki parit!"
                     + "\nPistesaldosi ei tällä kertaa ihan yltänyt plussan puolelle, sait yhteensä "
-                    + pisteet + "pistettä."
+                    + pisteet + " pistettä."
                     + "\nParempi onni ensi kerralla, eikun treenailemaan lisää!";
         }
 
