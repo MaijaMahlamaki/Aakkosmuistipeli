@@ -42,14 +42,12 @@ public class MuistipeliTest {
     }
 
     @Test
-    public void pisteetLasketaanOikeinKakkosilla() {
+    public void pisteetLasketaanOikeinKakkosella() {
         Pelaaja P = new Pelaaja("P");
         muistipeli = new Muistipeli(P);
         muistipeli.kirjaaPisteet(2);
-        muistipeli.kirjaaPisteet(2);
-        muistipeli.kirjaaPisteet(2);
         
-        assertEquals(6, muistipeli.getPisteet(P));
+        assertEquals(2, muistipeli.getPisteet());
 
     }
     
@@ -61,7 +59,7 @@ public class MuistipeliTest {
         muistipeli.kirjaaPisteet(-1);
         muistipeli.kirjaaPisteet(-1);
         
-        assertEquals(-3, muistipeli.getPisteet(P));
+        assertEquals(-3, muistipeli.getPisteet());
 
     }
     
@@ -76,7 +74,7 @@ public class MuistipeliTest {
         muistipeli.kirjaaPisteet(-1);
         muistipeli.kirjaaPisteet(-1);
         
-        assertEquals(0, muistipeli.getPisteet(P));
+        assertEquals(0, muistipeli.getPisteet());
 
     }
 //    Jostain kumman syystä tämä testi aiheuttaa nullpointer exceptionin,

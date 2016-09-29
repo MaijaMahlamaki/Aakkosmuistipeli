@@ -6,8 +6,8 @@
 package muistipeli.pelilogiikka;
 
 /**
- *
- * @author mahlamai
+ *Luokka määrittelee korttiolion, johon liittyy aina tietty kirjain.
+ * 
  */
 public class Kortti {
 

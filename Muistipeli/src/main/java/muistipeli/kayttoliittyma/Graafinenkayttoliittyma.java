@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package muistipeli.kayttoliittyma;
 
 import java.awt.BorderLayout;
@@ -26,13 +22,12 @@ import muistipeli.pelilogiikka.Pelilauta;
 
 /**
  *
- * @author mahlamai
+ * 
  */
 public class Graafinenkayttoliittyma implements Runnable {
 
     private JFrame frame;
     private ActionListener kuuntelija;
-    private Muistipeli muistipeli;
 
     public Graafinenkayttoliittyma() {
     }
@@ -44,8 +39,8 @@ public class Graafinenkayttoliittyma implements Runnable {
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        this.muistipeli = new Muistipeli(new Pelaaja("pelaaja"));
-        muistipeli.aloitaPeli();
+//        this.muistipeli = new Muistipeli(new Pelaaja("pelaaja"));
+//        muistipeli.aloitaPeli();
 
         luoKomponentit(frame.getContentPane());
 
@@ -57,14 +52,33 @@ public class Graafinenkayttoliittyma implements Runnable {
     private void luoKomponentit(Container container) {
 
         JPanel peli = new JPanel();
-        JTextArea teksti = new JTextArea("Tervetuloa pelaamaan muistipeliä!\n\n"
-                + "Ohjeet: Valitse kaksi korttia kerrallaan.\n"
-                + "Mikäli löydät parin, saat kaksi pistettä.\n"
-                + "Jos paria ei löytynyt, saat yhden miinuspisteen.\n");
+        
 
-        BorderLayout layout = new BorderLayout();
+        BorderLayout layout = new BorderLayout();       
         container.setLayout(layout);
-        container.add(teksti, BorderLayout.NORTH);
+        
+        JPanel ylaosa = new JPanel(new GridLayout(1,3));
+        
+        
+        container.add(ylaosa, BorderLayout.NORTH);
+        
+        
+        JTextArea teksti = new JTextArea("Tervetuloa pelaamaan muistipeliä!"
+                + "\nAloita kirjoittamalla nimesi viereiseen kenttään"
+                + "\nja klikkaa sitten aloituspainiketta."
+                + "\n\nPelin kulku:"
+                + "\nValitse kaksi korttia kerrallaan."
+                + "\nJos löydät parin, saat kaksi pistettä."
+                + "\nJos et, saat yhden miinuspisteen."
+                + "\nJos onnistut löytämään kaksi paria peräkkäin,"
+                + "\nsaat kaksi bonuspistettä!");
+        JTextField nimi = new JTextField();
+        JButton pelaajanLisays = new JButton("Aloita peli"); 
+        pelaajanLisays.setActionCommand("100");
+        
+        ylaosa.add(teksti);
+        ylaosa.add(nimi);
+        ylaosa.add(pelaajanLisays);
 
         JPanel panel = new JPanel(new GridLayout(4, 4));
 
@@ -108,7 +122,7 @@ public class Graafinenkayttoliittyma implements Runnable {
         JButton k15 = new JButton("X");
         k15.setActionCommand("15");
 
-        kuuntelija = new Kuuntelija(muistipeli, teksti, k0, k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15);
+        kuuntelija = new Kuuntelija(teksti, pelaajanLisays, nimi, ylaosa, k0, k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15);
 
         k0.addActionListener(kuuntelija);
         k1.addActionListener(kuuntelija);
@@ -126,6 +140,10 @@ public class Graafinenkayttoliittyma implements Runnable {
         k13.addActionListener(kuuntelija);
         k14.addActionListener(kuuntelija);
         k15.addActionListener(kuuntelija);
+        
+        nimi.addActionListener(kuuntelija);
+        pelaajanLisays.addActionListener(kuuntelija);
+        
 
         panel.add(k0);
         panel.add(k1);

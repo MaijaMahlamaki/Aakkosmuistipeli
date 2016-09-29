@@ -65,11 +65,8 @@ public class PelaajaTest {
     @Test
     public void kirjaaPisteetToimiiLuvullaKaksi() {
         pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(2);
 
-        assertEquals(8, pelaaja.getPisteet());
+        assertEquals(2, pelaaja.getPisteet());
 
     }
 
