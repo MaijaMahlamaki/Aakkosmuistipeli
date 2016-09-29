@@ -3,7 +3,7 @@
 Tämän harjoitustyön tavoitteena on ohjelmoida aakkosmuistipeli, jolla pelaaja voi treenata muistiaan.
 Pelissä yritetään etsiä kirjainpareja. 
 Pistelasku toimii niin, että löydetystä parista saa aina kaksi pistettä,
-ja "hudista" yhden miinuspisteen.
+ja "hudista" yhden miinuspisteen. Peräkkäisten parien löytämisestä saa bonusta!
 
 ##Dokumentaatio
 
@@ -17,7 +17,7 @@ ja "hudista" yhden miinuspisteen.
 ![Luokkakaavio](http://yuml.me/b3310b22 "Luokkakaavio")
 
 ###Pit-raportti
-[pit](http://htmlpreview.github.io/?https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Dokumentaatio/pit/201609222017/index.html "pit-raportti")
+[pit](http://htmlpreview.github.io/?https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Muistipeli/target/pit-reports/201609292004/index.html")
 
 ###Checkstyle-raportti
-[checkstyle](http://htmlpreview.github.io/?https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Dokumentaatio/site/checkstyle.html "checkstyle")
+[checkstyle](http://htmlpreview.github.io/?https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Muistipeli/target/site/checkstyle.html")
