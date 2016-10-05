@@ -86,37 +86,37 @@ public class Graafinenkayttoliittyma implements Runnable {
          indeksi. Kutakin indeksiä vastaavat kirjaimet on talletettu pelilaudan 
          arraylistiin ja parien tarkistus tapahtuu pelilogiikassa.       
          */
-        JButton k0 = new JButton("X");
+        JButton k0 = new JButton("");
         k0.setActionCommand("0");
-        JButton k1 = new JButton("X");
+        JButton k1 = new JButton("");
         k1.setActionCommand("1");
-        JButton k2 = new JButton("X");
+        JButton k2 = new JButton("");
         k2.setActionCommand("2");
-        JButton k3 = new JButton("X");
+        JButton k3 = new JButton("");
         k3.setActionCommand("3");
-        JButton k4 = new JButton("X");
+        JButton k4 = new JButton("");
         k4.setActionCommand("4");
-        JButton k5 = new JButton("X");
+        JButton k5 = new JButton("");
         k5.setActionCommand("5");
-        JButton k6 = new JButton("X");
+        JButton k6 = new JButton("");
         k6.setActionCommand("6");
-        JButton k7 = new JButton("X");
+        JButton k7 = new JButton("");
         k7.setActionCommand("7");
-        JButton k8 = new JButton("X");
+        JButton k8 = new JButton("");
         k8.setActionCommand("8");
-        JButton k9 = new JButton("X");
+        JButton k9 = new JButton("");
         k9.setActionCommand("9");
-        JButton k10 = new JButton("X");
+        JButton k10 = new JButton("");
         k10.setActionCommand("10");
-        JButton k11 = new JButton("X");
+        JButton k11 = new JButton("");
         k11.setActionCommand("11");
-        JButton k12 = new JButton("X");
+        JButton k12 = new JButton("");
         k12.setActionCommand("12");
-        JButton k13 = new JButton("X");
+        JButton k13 = new JButton("");
         k13.setActionCommand("13");
-        JButton k14 = new JButton("X");
+        JButton k14 = new JButton("");
         k14.setActionCommand("14");
-        JButton k15 = new JButton("X");
+        JButton k15 = new JButton("");
         k15.setActionCommand("15");
 
         kuuntelija = new Kuuntelija(teksti, pelaajanLisays, nimi, ylaosa, k0, k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15);

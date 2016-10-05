@@ -30,6 +30,7 @@ public class Muistipeli {
      */
     public void aloitaPeli() {
         pelilauta.uusiPeli();
+        pelaaja.nollaaPisteet();
 
     }
 
@@ -118,6 +119,7 @@ public class Muistipeli {
      */
     public boolean peliLoppu() {
         if (parienLkm == 0) {
+            pelaaja.lisaaKierros();
             return true;
         }
         return false;

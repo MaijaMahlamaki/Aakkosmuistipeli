@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="15" failures="0" name="muistipeli.pelaaja.PelaajaTest" time="0.025" errors="0" skipped="0">
+<testsuite tests="23" failures="0" name="muistipeli.pelaaja.PelaajaTest" time="0.011" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
@@ -62,19 +62,27 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="loppuViestiOikeaKunPisteetAlleNollaEik\u00E4Bonusta" time="0"/>
+  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="yhteisPisteetKahdestaPelistaLasketaanOikeinKunSummaNegatiivinen" time="0"/>
+  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="pisteidenNollausToimiiPositiivisillaLuvuilla" time="0"/>
+  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="pisteidenNollausToimiiNegatiivisillaLuvuilla" time="0"/>
+  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="yhteisPisteetKahdestaPelistaLasketaanOikeinKunSummaNolla" time="0"/>
   <testcase classname="muistipeli.pelaaja.PelaajaTest" name="kirjaaPisteetToimiiLuvullaMiinusYksi" time="0"/>
   <testcase classname="muistipeli.pelaaja.PelaajaTest" name="bonusPisteidenSummaPalautetaanOikeinJosKaksi" time="0"/>
   <testcase classname="muistipeli.pelaaja.PelaajaTest" name="bonusPisteidenSummaPalautetaanOikeinJosNolla" time="0"/>
   <testcase classname="muistipeli.pelaaja.PelaajaTest" name="bonusPisteidenSummaPalautetaanOikeinJosSuuri" time="0"/>
-  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="loppuViestiOikeaKunPisteetYliNollaJaBonusta" time="0"/>
   <testcase classname="muistipeli.pelaaja.PelaajaTest" name="konstruktoriToimiiOikein" time="0"/>
-  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="loppuViestiOikeaKunPisteetAlleNollaMuttaBonusta" time="0"/>
   <testcase classname="muistipeli.pelaaja.PelaajaTest" name="kirjaaPisteetKirjaaBonusPisteetUseallaPerakkaisellaParilla" time="0"/>
-  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="kirjaaPisteetKirjaaBonusPisteetOikeinJosValissaOnMiinus" time="0.001"/>
+  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="keskiArvoToimiiPositiivisillaLuvuilla" time="0"/>
+  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="keskiArvoToimiiNollalla" time="0"/>
+  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="kierroksenLisaysLisaaMontaKierrostaOikein" time="0"/>
+  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="kierroksenLisaysLisaaKaksi" time="0"/>
+  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="kierroksenLisaysLisaaYhden" time="0"/>
+  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="kirjaaPisteetKirjaaBonusPisteetOikeinJosValissaOnMiinus" time="0.002"/>
   <testcase classname="muistipeli.pelaaja.PelaajaTest" name="getNimiToimii" time="0"/>
-  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="loppuViestiOikeaKunPisteetYliNollaMuttaEiBonusta" time="0"/>
   <testcase classname="muistipeli.pelaaja.PelaajaTest" name="kirjaaPisteetToimiiMolemmillaLuvuilla" time="0"/>
-  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="kirjaaPisteetKirjaaBonusPisteetKahdellaPerakkaisellaParilla" time="0.001"/>
+  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="kirjaaPisteetKirjaaBonusPisteetKahdellaPerakkaisellaParilla" time="0"/>
+  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="keskiArvoToimiiNegatiivisillaLuvuilla" time="0"/>
+  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="pisteidenNollausToimiiNollalla" time="0"/>
   <testcase classname="muistipeli.pelaaja.PelaajaTest" name="kirjaaPisteetToimiiLuvullaKaksi" time="0"/>
+  <testcase classname="muistipeli.pelaaja.PelaajaTest" name="yhteisPisteetKahdestaPelistaLasketaanOikeinKunSummaPositiivinen" time="0"/>
 </testsuite>
