@@ -8,4 +8,5 @@ Päivä | Tunnit | Kuvaus
 24.09.2016 | 4h | Koodikatselmointi (+tappelua NetBeansin kanssa)
 29.09.2016 | 8h | Netbeans-ongelmien diagnosointia, pelilogiikan päivitystä, uuden pistelaskulogiikan luonti, tapahtumakuuntelijan päivitys, refarktorointi, javadoc
 29.09.2016 | 3h | Testien kirjoittamista, pit-raportin generointi ja testien parantaminen sen mukaisesti, uuden pit-raportin generointi ja uuden checkstyle-raportin generointi
+05.10.2016 | 4h | Uuden pelin aloittamisen mahdollisuus edellisen perään, kumuloituvan pistelaskun toteuttaminen. Testien kirjoittaminen.
 
