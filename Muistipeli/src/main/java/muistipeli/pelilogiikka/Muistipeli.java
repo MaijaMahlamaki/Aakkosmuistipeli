@@ -9,12 +9,21 @@ import muistipeli.pelaaja.Pelaaja;
  * tarkistamiseen.
  *
  */
+
 public class Muistipeli {
 
     private Pelaaja pelaaja;
     private Pelilauta pelilauta;
     private int parienLkm;
 
+    
+    /**
+     * Muistipelin konstruktorille annetaan parametrina pelaaja, ja 
+     * konstruktori luo uuden pelilaudan. Parien lukumääärä alustetaan 
+     * kahdeksaan kappaleeseen pelin päättymisen tarkistusta varten.
+     * 
+     * @param pelaaja 
+     */
     public Muistipeli(Pelaaja pelaaja) {
         this.pelaaja = pelaaja;
         this.pelilauta = new Pelilauta();
@@ -24,9 +33,12 @@ public class Muistipeli {
 
     /**
      * Metodi aloittaa uuden pelin kutsumalla pelilautaolion metodia uusiPeli(),
-     * jolla luodaan pelilauta kortteineen.
+     * jolla luodaan pelilauta kortteineen. Samalla nollataan pelaajan
+     * mahdollisen edellisen kierroksen pisteet, jotteivat ne jää kummittelemaan
+     * uudelle kierrokselle.
      *
      * @see muistipeli.pelilogiikka.Pelilauta#uusiPeli()
+     * @see muistipeli.pelaaja.Pelaaja#nollaaPisteet()
      */
     public void aloitaPeli() {
         pelilauta.uusiPeli();

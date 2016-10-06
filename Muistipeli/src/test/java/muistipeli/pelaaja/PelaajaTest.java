@@ -157,141 +157,166 @@ public class PelaajaTest {
 
     }
 
-//    @Test
-//    public void loppuViestiOikeaKunPisteetYliNollaJaBonusta() {
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(2);
-//
-//        String odotettu = "Huikea suoritus Pekka, olet varsinainen muistiguru!"
-//                + "\nKeräsit bonuspisteitä 14 ja lopullinen pistesaldosi on 30 pistettä!"
-//                + "\nLoistavaa!"
-//                + "\nPelatut kierrokset: 1"
-//                + "\nYhteispisteet: 30"
-//                + "\nPisteiden keskiarvo: 30";
-//
-//        assertEquals(odotettu, pelaaja.loppuViesti());
-//
-//    }
-//
-//    @Test
-//    public void loppuViestiOikeaKunPisteetYliNollaMuttaEiBonusta() {
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//
-//        String odotettu = "Hieno suoritus Pekka, olet varsin etevä muistaja!"
-//                + "\nBonuspisteet jäivät tällä kertaa saamatta."
-//                + "\nKeräsit siitä huolimatta kuitenkin 8 pistettä! Loistavaa!"
-//                + "\nPelatut kierrokset: 1"
-//                + "\nYhteispisteet: 8"
-//                + "\nPisteiden keskiarvo: 8";
-//
-//        assertEquals(odotettu, pelaaja.loppuViesti());
-//
-//    }
-//
-//    @Test
-//    public void loppuViestiOikeaKunPisteetAlleNollaMuttaBonusta() {
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(2);
-//
-//        String odotettu = "Hyvä Pekka, löysit kaikki parit!"
-//                + "\nPistesaldosi ei tällä kertaa ihan yltänyt plussan puolelle, "
-//                + "sait yhteensä -1 pistettä."
-//                + "\nKeräsit kuitenkin hienot 2 bonuspistettä!"
-//                + "\nPelatut kierrokset: 1"
-//                + "\nYhteispisteet: -1"
-//                + "\nPisteiden keskiarvo: -1";
-//
-//        assertEquals(odotettu, pelaaja.loppuViesti());
-//
-//    }
-//
-//    @Test
-//    public void loppuViestiOikeaKunPisteetAlleNollaEikäBonusta() {
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//        pelaaja.kirjaaPisteet(-1);
-//        pelaaja.kirjaaPisteet(2);
-//
-//        String odotettu = "Hyvä Pekka, löysit kaikki parit!"
-//                + "\nPistesaldosi ei tällä kertaa ihan yltänyt plussan puolelle, "
-//                + "sait yhteensä -4 pistettä."
-//                + "\nParempi onni ensi kerralla, eikun treenailemaan lisää!"
-//                + "\nPelatut kierrokset: 1"
-//                + "\nYhteispisteet: -4"
-//                + "\nPisteiden keskiarvo: -4";
-//        assertEquals(odotettu, pelaaja.loppuViesti());
-//
-//    }
+    @Test
+    public void loppuViestiOikeaKunPisteetYliNollaJaBonusta() {
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.lisaaKierros();
+
+        String odotettu = "Huikea suoritus Pekka, olet varsinainen muistiguru!"
+                + "\nKeräsit bonuspisteitä 14 ja lopullinen pistesaldosi on 30 pistettä!"
+                + "\nLoistavaa!"
+                + "\nPelatut kierrokset: 1"
+                + "\nYhteispisteet: 30"
+                + "\nPisteiden keskiarvo: 30.0";
+
+        assertEquals(odotettu, pelaaja.loppuViesti());
+
+    }
+
+    @Test
+    public void loppuViestiOikeaKunPisteetYliNollaMuttaEiBonusta() {
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.lisaaKierros();
+
+        String odotettu = "Hieno suoritus Pekka, olet varsin etevä muistaja!"
+                + "\nBonuspisteet jäivät tällä kertaa saamatta."
+                + "\nKeräsit siitä huolimatta kuitenkin 8 pistettä! Loistavaa!"
+                + "\nPelatut kierrokset: 1"
+                + "\nYhteispisteet: 8"
+                + "\nPisteiden keskiarvo: 8.0";
+
+        assertEquals(odotettu, pelaaja.loppuViesti());
+
+    }
+
+    @Test
+    public void loppuViestiOikeaKunPisteetAlleNollaMuttaBonusta() {
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.lisaaKierros();
+
+        String odotettu = "Hyvä Pekka, löysit kaikki parit!"
+                + "\nPistesaldosi ei tällä kertaa ihan yltänyt plussan puolelle, "
+                + "sait yhteensä -1 pistettä."
+                + "\nKeräsit kuitenkin hienot 2 bonuspistettä!"
+                + "\nPelatut kierrokset: 1"
+                + "\nYhteispisteet: -1"
+                + "\nPisteiden keskiarvo: -1.0";
+
+        assertEquals(odotettu, pelaaja.loppuViesti());
+
+    }
+
+    @Test
+    public void loppuViestiOikeaKunPisteetAlleNollaEikäBonusta() {
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.lisaaKierros();
+
+        String odotettu = "Hyvä Pekka, löysit kaikki parit!"
+                + "\nPistesaldosi ei tällä kertaa ihan yltänyt plussan puolelle, "
+                + "sait yhteensä -4 pistettä."
+                + "\nParempi onni ensi kerralla, eikun treenailemaan lisää!"
+                + "\nPelatut kierrokset: 1"
+                + "\nYhteispisteet: -4"
+                + "\nPisteiden keskiarvo: -4.0";
+        assertEquals(odotettu, pelaaja.loppuViesti());
+
+    }
+    
+    
+    @Test       
+    public void kierroksetAlussaNolla() {
+        assertEquals(0, pelaaja.kierrokset());
+    }
+    
+    @Test       
+    public void pisteetAlussaNolla() {
+        assertEquals(0, pelaaja.getPisteet());
+    }
+    
+    @Test       
+    public void bonusPisteetAlussaNolla() {
+        assertEquals(0, pelaaja.bonuspisteet());
+    }
+    
+    @Test       
+    public void yhteisPisteetAlussaNolla() {
+        assertEquals(0, pelaaja.yhteisPisteet());
+    }
     
     @Test
     public void kierroksenLisaysLisaaYhden() {
@@ -429,21 +454,77 @@ public class PelaajaTest {
     @Test 
         
     public void pisteidenNollausToimiiNegatiivisillaLuvuilla() {
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
         
+        pelaaja.nollaaPisteet();
+        
+        assertEquals(0, pelaaja.getPisteet());
     }
     
     @Test 
         
-    public void pisteidenNollausToimiiNollalla() {
+    public void pisteidenNollausEiMuutaPisteitaJosPisteitaNolla() {
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
         
+        pelaaja.nollaaPisteet();
+        
+        assertEquals(0, pelaaja.getPisteet());
     }
     
     @Test 
         
     public void pisteidenNollausToimiiPositiivisillaLuvuilla() {
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
         
+        pelaaja.nollaaPisteet();
+        
+        assertEquals(0, pelaaja.getPisteet());
     }
     
+    @Test 
+        
+    public void pisteidenNollausNollaaBonuspisteet() {
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(2);
+        
+        pelaaja.nollaaPisteet();
+        
+        assertEquals(0, pelaaja.bonuspisteet());
+    }
+    
+    @Test 
+        
+    public void pisteidenNollausEiMuutaMitaanJosBonusPisteitaNolla() {
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(-1);
+        pelaaja.kirjaaPisteet(2);
+        
+        pelaaja.nollaaPisteet();
+        
+        assertEquals(0, pelaaja.bonuspisteet());
+    }
     
     
 }

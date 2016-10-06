@@ -30,6 +30,9 @@ public class Graafinenkayttoliittyma implements Runnable {
     private JFrame frame;
     private ActionListener kuuntelija;
 
+    /**
+     * Graafisen käyttöliittymän konstruktori.
+     */
     public Graafinenkayttoliittyma() {
     }
 

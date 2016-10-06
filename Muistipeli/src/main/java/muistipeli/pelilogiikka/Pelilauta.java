@@ -11,7 +11,9 @@ import java.util.Collections;
 public class Pelilauta {
 
     private ArrayList<Kortti> kortit;
-
+/**
+ * Pelilaudan kostruktorissa alustetaan uusi korttilista.
+ */
     public Pelilauta() {
         this.kortit = new ArrayList<Kortti>();
     }

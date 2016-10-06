@@ -7,7 +7,12 @@ package muistipeli.pelilogiikka;
 public class Kortti {
 
     private String kirjain;
-
+    
+/**
+ * Kortin konstruktori saa parametrina siihen liitetyn kirjaimen.
+ * @param kirjain 
+ */
+    
     public Kortti(String kirjain) {
         this.kirjain = kirjain;
     }

@@ -16,7 +16,12 @@ public class Pelaaja {
     private int kierrokset;
     private int yhteispisteet;
     private double keskiarvo;
-
+/**
+ * Pelaaja saa konstruktorin parametrina pelaajan nimen. 
+ * Konstruktorissa asetetaan pisteet, bonuspisteet, kierrokset, yhteispisteet ja
+ * kierrosten pisteiden keskiarvo alkamaan nollasta.
+ * @param nimi 
+ */
     public Pelaaja(String nimi) {
         this.nimi = nimi;
         this.pisteet = 0;
@@ -38,8 +43,9 @@ public class Pelaaja {
      * Pistelaskumetodi huolehtii pelaajan pisteiden kirjaamisesta. Pistelasku
      * menee niin, että löydetystä parista saa kaksi pistettä. Jos paria ei
      * löytynyt, pelaaja saa miinuspisteen. Kahden parin löytämisestä peräkkäin
-     * saa kaksi bonuspistettä.
-     * 
+     * saa kaksi bonuspistettä. Metodi päivittää aina samalla myös pelien
+     * yhteispisteet, jotta pelaajalle voidaan näyttää pelin lopuksi tämän ja
+     * mahdollisten aiempien pelien yhteispisteet ja pistekeskiarvo.
      *
      * @param pisteet muistipelin välittämä pistemäärä, joka on joko 2 parin
      * löytämisestä tai -1 hudista.
@@ -62,7 +68,7 @@ public class Pelaaja {
 
     /**
      * Metodi palauttaa pelaajan pelin aikana keräämien bonuspisteiden määrän.
-     *
+     * @return bonuspisteet
      */
     public int bonuspisteet() {
 
@@ -74,7 +80,7 @@ public class Pelaaja {
      * vaihtelee sen mukaan, kuinka hyvin pelaaja pärjäsi pelissä eli kerättyjen
      * pisteiden ja bonuspisteiden mukaan.
      *
-     * @return
+     * @return kierroksen pisteiden mukaan räätälöity viesti
      */
     public String loppuViesti() {
         String viesti = "";
@@ -121,25 +127,49 @@ public class Pelaaja {
         return viesti;
 
     }
-    
-    
+
+    /**
+     * Metodi lisaa pelaajalle yhden pelikierroksen, jotta pelaajalle voidaan
+     * ilmoittaa pelin lopuksi, montako kierrosta hän on pelannut ja laskea
+     * kaikkien pelien pistekeskiarvo.
+     */
     public void lisaaKierros() {
         this.kierrokset = this.kierrokset + 1;
-}
+    }
+
     
+    /**
+     * Metodi palauttaa pelaajan pelaamien kierrosten lukumäärän.
+     * @return kierrosten lukumäärä
+     */
     public int kierrokset() {
         return this.kierrokset;
     }
-    
+
+    /**
+     * Metodi palauttaa kaikkien pelaajan pelaamien kierrosten pisteiden summan.
+     * @return yhteispisteet
+     */
     public int yhteisPisteet() {
         return yhteispisteet;
     }
 
+    /**
+     * Metodi laskee yhteispisteiden ja kierrosten lukumäärän perusteella
+     * pelattujen kierrosten pistekeskiarvon.
+     *
+     * @return keskiarvo
+     */
     public double keskiArvo() {
-        this.keskiarvo = (double) this.yhteispisteet/this.kierrokset;
+        this.keskiarvo = (double) this.yhteispisteet / this.kierrokset;
         return keskiarvo;
     }
-    
+
+    /**
+     * Metodilla nollataan pisteet kierrosten välillä, jotta seuraavan
+     * kierroksen pistelasku aloitetaan aina nollasta sekä normaaleilla että
+     * bonuspisteillä.
+     */
     public void nollaaPisteet() {
         this.pisteet = 0;
         this.bonuspisteet = 0;

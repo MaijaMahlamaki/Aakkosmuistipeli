@@ -17,12 +17,17 @@ import muistipeli.pelilogiikka.Pelilauta;
 public class Kayttoliittyma {
 
     private Scanner lukija;
-
+/**
+ * Tekstikäyttöliittymä saa konstruktorin parametrina lukijan.
+ * @param lukija lukija
+ */
     public Kayttoliittyma(Scanner lukija) {
         this.lukija = lukija;
 
     }
-
+/**
+ * Metodi pyörittää tekstikäyttöliittymää.
+ */
     public void kaynnista() {
         System.out.println("Tervetuloa pelaamaan aakkosmuistipeliä!");
         System.out.println("\nSäännöt:\n"
