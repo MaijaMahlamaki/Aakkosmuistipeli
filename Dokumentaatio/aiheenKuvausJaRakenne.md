@@ -31,10 +31,6 @@ on kerännyt kaikilla kierroksilla yhteensä ja mikä on kierrosten pisteiden ke
 
 ##Rakenne ja toiminta
 
-**Luokkakaavio**
-
-![luokkakaavio](http://yuml.me/b3310b22)
-
 Peli toimii graafisella käyttöliittymällä.
 
 Kun peli käynnistyy, näytön yläreunaan ilmestyy ohjeet ja kenttä, johon pelaaja syöttää nimensä.
@@ -58,3 +54,13 @@ eikä pelaajan tarvitse enää kirjoittaa nimeään uudestaan.
 
 Kun pelejä pelataan useita peräkkäin, pelilogiikka pitää kirjaa pelatuista kierroksista; niiden lukumäärästä,
 yhteispisteistä ja kierrosten pisteiden keskiarvosta. 
+
+**Luokkakaavio**
+
+![luokkakaavio](http://yuml.me/b3310b22)
+
+**Sekvenssikaavioita**
+
+![Pelin aloitus](/home/mahlamai/Maija/Koulu/JavaLabra/Kaaviot/pelinAloitus.jpg)
+![Korttien kääntäminen, ei paria](/home/mahlamai/Maija/Koulu/JavaLabra/Kaaviot/korttienKaantaminen1.jpg)
+![Korttien kääntäminen, pari löytyi](/home/mahlamai/Maija/Koulu/JavaLabra/Kaaviot/korttienKaantaminen2.jpg)
