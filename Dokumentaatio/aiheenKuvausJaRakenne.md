@@ -61,6 +61,6 @@ yhteispisteistä ja kierrosten pisteiden keskiarvosta.
 
 **Sekvenssikaavioita**
 
-![Pelin aloitus][/home/mahlamai/Desktop/pelinAloitus.jpg]
+![Pelin aloitus]/home/mahlamai/Desktop/pelinAloitus.jpg
 ![Korttien kääntäminen, ei paria](/home/mahlamai/Desktop/korttienKaantaminen1.jpg)
 ![Korttien kääntäminen, pari löytyi](/home/mahlamai/Desktop/korttienKaantaminen2.jpg)
