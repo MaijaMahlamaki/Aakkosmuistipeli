@@ -61,6 +61,6 @@ yhteispisteistä ja kierrosten pisteiden keskiarvosta.
 
 **Sekvenssikaavioita**
 
-![Pelin aloitus]/home/mahlamai/Desktop/pelinAloitus.jpg
-![Korttien kääntäminen, ei paria](/home/mahlamai/Desktop/korttienKaantaminen1.jpg)
-![Korttien kääntäminen, pari löytyi](/home/mahlamai/Desktop/korttienKaantaminen2.jpg)
+![Pelin aloitus](https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Dokumentaatio/sekvenssikaaviot/pelinAloitus.jpg)
+![Korttien kääntäminen, ei paria](https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Dokumentaatio/sekvenssikaaviot/korttienKaantaminen1.jpg)
+![Korttien kääntäminen, pari löytyi](https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Dokumentaatio/sekvenssikaaviot/korttienKaantaminen2.jpg)
