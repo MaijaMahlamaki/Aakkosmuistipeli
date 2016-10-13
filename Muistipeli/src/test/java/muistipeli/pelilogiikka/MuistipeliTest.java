@@ -200,6 +200,16 @@ public class MuistipeliTest {
         assertEquals(11, muistipeli.getPisteet());
     }
 
+    
+     @Test
+    public void naytaKorttiNayttaaOikeanKortin() {
+        Pelaaja P = new Pelaaja("P");
+        muistipeli = new Muistipeli(P);
+        muistipeli.getPelilauta().luoKortit();
+
+        assertEquals("a", muistipeli.naytaKortti(0));
+    }
+    
     @Test
     public void naytaKortitNayttaaParinOikein() {
         Pelaaja P = new Pelaaja("P");

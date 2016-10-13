@@ -54,9 +54,9 @@ public class Pelaaja {
     public void kirjaaPisteet(int pisteet) {
 
         if (edellisetPisteet == 2 && pisteet == 2) {
-            this.pisteet = this.pisteet + pisteet + 2;
+            this.pisteet = this.pisteet + 2;
             this.bonuspisteet = this.bonuspisteet + 2;
-            this.yhteispisteet = this.yhteispisteet + pisteet + 2;
+            this.yhteispisteet = this.yhteispisteet + 2 + 2;
 
         } else {
 
@@ -85,39 +85,38 @@ public class Pelaaja {
     public String loppuViesti() {
         String viesti = "";
 
-        if (pisteet > 0 && bonuspisteet > 0) {
+        if (pisteet > 4 && bonuspisteet > 4) {
             viesti = "Huikea suoritus " + nimi + ", olet varsinainen muistiguru!"
-                    + "\nKeräsit bonuspisteitä " + bonuspisteet
-                    + " ja lopullinen pistesaldosi on " + pisteet
-                    + " pistettä!"
+                    + "\nKeräsit " + pisteet
+                    + " pistettä ja " + bonuspisteet
+                    + " bonuspistettä!"
                     + "\nLoistavaa!"
                     + "\nPelatut kierrokset: " + kierrokset
                     + "\nYhteispisteet: " + yhteispisteet
                     + "\nPisteiden keskiarvo: " + keskiArvo();
         }
-        if (pisteet > 0 && bonuspisteet == 0) {
+        else if (pisteet > 2 && bonuspisteet > 2) {
             viesti = "Hieno suoritus " + nimi + ", olet varsin etevä muistaja!"
-                    + "\nBonuspisteet jäivät tällä kertaa saamatta."
-                    + "\nKeräsit siitä huolimatta kuitenkin " + pisteet
-                    + " pistettä! Loistavaa!"
+                    + "\nKeräsit " + pisteet
+                    + " pistettä ja " + bonuspisteet
+                    + " bonuspistettä! Loistavaa!"
                     + "\nPelatut kierrokset: " + kierrokset
                     + "\nYhteispisteet: " + yhteispisteet
                     + "\nPisteiden keskiarvo: " + keskiArvo();
         }
-        if (pisteet <= 0 && bonuspisteet > 0) {
+        else if (pisteet < 0 && bonuspisteet > 2) {
             viesti = "Hyvä " + nimi + ", löysit kaikki parit!"
                     + "\nPistesaldosi ei tällä kertaa ihan yltänyt plussan puolelle, sait yhteensä "
-                    + pisteet + " pistettä."
-                    + "\nKeräsit kuitenkin hienot " + bonuspisteet
-                    + " bonuspistettä!"
+                    + pisteet + " pistettä, mutta keräsit kuitenkin " + bonuspisteet + " bonuspistettä."
                     + "\nPelatut kierrokset: " + kierrokset
                     + "\nYhteispisteet: " + yhteispisteet
                     + "\nPisteiden keskiarvo: " + keskiArvo();
         }
-        if (pisteet <= 0 && bonuspisteet == 0) {
+        else if (pisteet < 0 && bonuspisteet == 2) {
             viesti = "Hyvä " + nimi + ", löysit kaikki parit!"
                     + "\nPistesaldosi ei tällä kertaa ihan yltänyt plussan puolelle, sait yhteensä "
-                    + pisteet + " pistettä."
+                    + pisteet + " pistettä ja "
+                    + bonuspisteet + " bonuspistettä."
                     + "\nParempi onni ensi kerralla, eikun treenailemaan lisää!"
                     + "\nPelatut kierrokset: " + kierrokset
                     + "\nYhteispisteet: " + yhteispisteet

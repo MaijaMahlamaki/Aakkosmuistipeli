@@ -94,7 +94,7 @@ public class PelaajaTest {
         pelaaja.kirjaaPisteet(2);
         pelaaja.kirjaaPisteet(2);
 
-        assertEquals(6, pelaaja.getPisteet());
+        assertEquals(6, pelaaja.yhteisPisteet());
 
     }
 
@@ -105,7 +105,7 @@ public class PelaajaTest {
         pelaaja.kirjaaPisteet(2);
         pelaaja.kirjaaPisteet(2);
 
-        assertEquals(14, pelaaja.getPisteet());
+        assertEquals(14, pelaaja.yhteisPisteet());
 
     }
 
@@ -117,7 +117,7 @@ public class PelaajaTest {
         pelaaja.kirjaaPisteet(2);
         pelaaja.kirjaaPisteet(2);
 
-        assertEquals(11, pelaaja.getPisteet());
+        assertEquals(11, pelaaja.yhteisPisteet());
 
     }
 
@@ -158,30 +158,27 @@ public class PelaajaTest {
     }
 
     @Test
-    public void loppuViestiOikeaKunPisteetYliNollaJaBonusta() {
+    public void loppuViestiOikeaKunPisteetYliNeljaJaBonustaYliNelja() {
         pelaaja.kirjaaPisteet(2);
         pelaaja.kirjaaPisteet(2);
         pelaaja.kirjaaPisteet(2);
         pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(2);
+
         pelaaja.lisaaKierros();
 
         String odotettu = "Huikea suoritus Pekka, olet varsinainen muistiguru!"
-                + "\nKeräsit bonuspisteitä 14 ja lopullinen pistesaldosi on 30 pistettä!"
+                + "\nKeräsit 8 pistettä ja 6 bonuspistettä!"
                 + "\nLoistavaa!"
                 + "\nPelatut kierrokset: 1"
-                + "\nYhteispisteet: 30"
-                + "\nPisteiden keskiarvo: 30.0";
+                + "\nYhteispisteet: 14"
+                + "\nPisteiden keskiarvo: 14.0";
 
         assertEquals(odotettu, pelaaja.loppuViesti());
 
     }
 
     @Test
-    public void loppuViestiOikeaKunPisteetYliNollaMuttaEiBonusta() {
+    public void loppuViestiOikeaKunPisteetYliKaksiJaBonustaYliKaksi() {
         pelaaja.kirjaaPisteet(2);
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(2);
@@ -193,59 +190,41 @@ public class PelaajaTest {
         pelaaja.kirjaaPisteet(2);
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(-1);
         pelaaja.lisaaKierros();
 
         String odotettu = "Hieno suoritus Pekka, olet varsin etevä muistaja!"
-                + "\nBonuspisteet jäivät tällä kertaa saamatta."
-                + "\nKeräsit siitä huolimatta kuitenkin 8 pistettä! Loistavaa!"
+                + "\nKeräsit 11 pistettä ja 4 bonuspistettä! Loistavaa!"
                 + "\nPelatut kierrokset: 1"
-                + "\nYhteispisteet: 8"
-                + "\nPisteiden keskiarvo: 8.0";
+                + "\nYhteispisteet: 15"
+                + "\nPisteiden keskiarvo: 15.0";
 
         assertEquals(odotettu, pelaaja.loppuViesti());
 
     }
 
     @Test
-    public void loppuViestiOikeaKunPisteetAlleNollaMuttaBonusta() {
+    public void loppuViestiOikeaKunPisteetNollaTaiAlleJaBonustaYliKaksi() {
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(2);
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(2);
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(2);
         pelaaja.kirjaaPisteet(2);
         pelaaja.lisaaKierros();
 
         String odotettu = "Hyvä Pekka, löysit kaikki parit!"
                 + "\nPistesaldosi ei tällä kertaa ihan yltänyt plussan puolelle, "
-                + "sait yhteensä -1 pistettä."
-                + "\nKeräsit kuitenkin hienot 2 bonuspistettä!"
+                + "sait yhteensä -5 pistettä, mutta keräsit kuitenkin 4 bonuspistettä."
                 + "\nPelatut kierrokset: 1"
                 + "\nYhteispisteet: -1"
                 + "\nPisteiden keskiarvo: -1.0";
@@ -255,44 +234,28 @@ public class PelaajaTest {
     }
 
     @Test
-    public void loppuViestiOikeaKunPisteetAlleNollaEikäBonusta() {
+    public void loppuViestiOikeaKunPisteetAlleNollaJaBonustaKaksi() {
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(2);
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(-1);
         pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(2);
-        pelaaja.kirjaaPisteet(-1);
-        pelaaja.kirjaaPisteet(2);
+        
+        
         pelaaja.lisaaKierros();
 
         String odotettu = "Hyvä Pekka, löysit kaikki parit!"
                 + "\nPistesaldosi ei tällä kertaa ihan yltänyt plussan puolelle, "
-                + "sait yhteensä -4 pistettä."
+                + "sait yhteensä -4 pistettä ja 2 bonuspistettä."
                 + "\nParempi onni ensi kerralla, eikun treenailemaan lisää!"
                 + "\nPelatut kierrokset: 1"
-                + "\nYhteispisteet: -4"
-                + "\nPisteiden keskiarvo: -4.0";
+                + "\nYhteispisteet: -2"
+                + "\nPisteiden keskiarvo: -2.0";
         assertEquals(odotettu, pelaaja.loppuViesti());
 
     }

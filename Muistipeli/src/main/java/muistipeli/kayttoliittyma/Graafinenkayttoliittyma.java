@@ -1,12 +1,15 @@
 package muistipeli.kayttoliittyma;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.Font;
 import java.awt.GridLayout;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.HashMap;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -43,8 +46,7 @@ public class Graafinenkayttoliittyma implements Runnable {
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-//        this.muistipeli = new Muistipeli(new Pelaaja("pelaaja"));
-//        muistipeli.aloitaPeli();
+
         luoKomponentit(frame.getContentPane());
 
         frame.pack();
@@ -88,78 +90,82 @@ public class Graafinenkayttoliittyma implements Runnable {
          Napeissa on action commandina korttia vastaava 
          indeksi. Kutakin indeksiä vastaavat kirjaimet on talletettu pelilaudan 
          arraylistiin ja parien tarkistus tapahtuu pelilogiikassa.       
-         */
+         */        
+        
+        
+//        for (int i = 0; i < 15; i++) {
+//            JButton button = new JButton();
+//            button.setActionCommand(Integer.toString(i));
+//            kuuntelija = new Kuuntelija(teksti, pelaajanLisays, nimi, ylaosa, button);
+//            button.addActionListener(kuuntelija);
+//            panel.add(button);
+//            
+//        }
+        ArrayList<JButton> napit = new ArrayList<>();
+        
         JButton k0 = new JButton("");
         k0.setActionCommand("0");
+        napit.add(k0);
         JButton k1 = new JButton("");
         k1.setActionCommand("1");
+        napit.add(k1);
         JButton k2 = new JButton("");
         k2.setActionCommand("2");
+        napit.add(k2);
         JButton k3 = new JButton("");
         k3.setActionCommand("3");
+        napit.add(k3);
         JButton k4 = new JButton("");
         k4.setActionCommand("4");
+        napit.add(k4);
         JButton k5 = new JButton("");
         k5.setActionCommand("5");
+        napit.add(k5);
         JButton k6 = new JButton("");
         k6.setActionCommand("6");
+        napit.add(k6);
         JButton k7 = new JButton("");
         k7.setActionCommand("7");
+        napit.add(k7);
         JButton k8 = new JButton("");
         k8.setActionCommand("8");
+        napit.add(k8);
         JButton k9 = new JButton("");
         k9.setActionCommand("9");
+        napit.add(k9);
         JButton k10 = new JButton("");
         k10.setActionCommand("10");
+        napit.add(k10);
         JButton k11 = new JButton("");
         k11.setActionCommand("11");
+        napit.add(k11);
         JButton k12 = new JButton("");
         k12.setActionCommand("12");
+        napit.add(k12);
         JButton k13 = new JButton("");
         k13.setActionCommand("13");
+        napit.add(k13);
         JButton k14 = new JButton("");
         k14.setActionCommand("14");
+        napit.add(k14);
         JButton k15 = new JButton("");
         k15.setActionCommand("15");
+        napit.add(k15);
 
         kuuntelija = new Kuuntelija(teksti, pelaajanLisays, nimi, ylaosa, k0, k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15);
 
-        k0.addActionListener(kuuntelija);
-        k1.addActionListener(kuuntelija);
-        k2.addActionListener(kuuntelija);
-        k3.addActionListener(kuuntelija);
-        k4.addActionListener(kuuntelija);
-        k5.addActionListener(kuuntelija);
-        k6.addActionListener(kuuntelija);
-        k7.addActionListener(kuuntelija);
-        k8.addActionListener(kuuntelija);
-        k9.addActionListener(kuuntelija);
-        k10.addActionListener(kuuntelija);
-        k11.addActionListener(kuuntelija);
-        k12.addActionListener(kuuntelija);
-        k13.addActionListener(kuuntelija);
-        k14.addActionListener(kuuntelija);
-        k15.addActionListener(kuuntelija);
+       
+        for (JButton button : napit) {
+            button.addActionListener(kuuntelija);
+            panel.add(button);
+            button.setFont(new Font("Arial", Font.PLAIN, 40));
+            button.setBackground(Color.PINK);
+        }
+
 
         nimi.addActionListener(kuuntelija);
         pelaajanLisays.addActionListener(kuuntelija);
 
-        panel.add(k0);
-        panel.add(k1);
-        panel.add(k2);
-        panel.add(k3);
-        panel.add(k4);
-        panel.add(k5);
-        panel.add(k6);
-        panel.add(k7);
-        panel.add(k8);
-        panel.add(k9);
-        panel.add(k10);
-        panel.add(k11);
-        panel.add(k12);
-        panel.add(k13);
-        panel.add(k14);
-        panel.add(k15);
 
         container.add(panel);
 

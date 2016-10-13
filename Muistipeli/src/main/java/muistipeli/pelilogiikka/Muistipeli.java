@@ -77,6 +77,16 @@ public class Muistipeli {
         }
 
     }
+    
+    /**
+     * Metodi palauttaa yksittäisen kortin kirjaimen.
+     * @param kortti
+     * @return yksittäisen kortin kirjain
+     * @see muistipeli.pelilogiikka.Pelilauta#kortinKirjain(int) 
+     */
+    public String naytaKortti(int kortti) {
+        return pelilauta.kortinKirjain(kortti);
+    }
 
     /**
      * Metodi "näyttää" pelaajalle käännetyt kortit eli palauttaa sellaisenaan
@@ -91,6 +101,9 @@ public class Muistipeli {
      * @see muistipeli.pelilogiikka.Pelilauta#kortinKirjain(int).
      *     
 */
+    
+            
+            
     public String naytaKortit(int kortti1, int kortti2) {
         String kortit = this.pelilauta.kortinKirjain(kortti1)
                 + " ja " + this.pelilauta.kortinKirjain(kortti2);
@@ -120,7 +133,7 @@ public class Muistipeli {
      *
      */
     public int getPisteet() {
-        return pelaaja.getPisteet();
+        return pelaaja.yhteisPisteet();
     }
 
     /**

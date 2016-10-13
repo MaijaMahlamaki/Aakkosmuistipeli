@@ -1,5 +1,6 @@
 package muistipeli.kayttoliittyma;
 
+import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,6 +28,8 @@ public class Kuuntelija implements ActionListener {
     private ArrayList<JButton> napit;
     private int ekaKortti;
     private int tokaKortti;
+    private String ekaKirjain;
+    private String tokaKirjain;
     private int klikkaukset;
     private JTextArea teksti;
     private JButton pelaajanLisays;
@@ -35,6 +38,7 @@ public class Kuuntelija implements ActionListener {
     private Muistipeli muistipeli;
     private Pelaaja pelaaja;
     private JButton uusiPeli;
+    private boolean huti;
 
     /**
      * Kuuntelija saa konstruktorin parametreinä paneelin yläosan ja siihen 
@@ -48,30 +52,15 @@ public class Kuuntelija implements ActionListener {
      * @param pelaajanLisays lisää pelaajan
      * @param pelaajanNimi plaaja kirjoittaa nimensä kenttään
      * @param ylaosa ylapaneeli, jossa näytetään käyttäjälle tietoa
-     * @param k0 kortti
-     * @param k1 kortti
-     * @param k2 kortti
-     * @param k3 kortti
-     * @param k4 kortti
-     * @param k5 kortti
-     * @param k6 kortti
-     * @param k7 kortti
-     * @param k8 kortti
-     * @param k9 kortti
-     * @param k10 kortti
-     * @param k11 kortti
-     * @param k12 kortti
-     * @param k13 kortti
-     * @param k14 kortti
-     * @param k15 kortti
      */
-    public Kuuntelija(JTextArea teksti, JButton pelaajanLisays, JTextField pelaajanNimi, JPanel ylaosa, JButton k0, JButton k1, JButton k2, JButton k3, JButton k4, JButton k5, JButton k6, JButton k7, JButton k8, JButton k9, JButton k10, JButton k11, JButton k12, JButton k13, JButton k14, JButton k15) {
+    public Kuuntelija(JTextArea teksti, JButton pelaajanLisays, JTextField pelaajanNimi, JPanel ylaosa, JButton... JButtons) {
         this.teksti = teksti;
         this.pelaajanLisays = pelaajanLisays;
         this.pelaajanNimi = pelaajanNimi;
         this.ylaosa = ylaosa;
         this.uusiPeli = new JButton("Aloita uusi Peli");
         this.napit = new ArrayList<>();
+        this.huti = false;
 
     }
 
@@ -91,8 +80,10 @@ public class Kuuntelija implements ActionListener {
             muistipeli = new Muistipeli(pelaaja);
             muistipeli.aloitaPeli();
 
-            for (JButton n : this.napit) {
-                n.setEnabled(true);
+            for (JButton b : this.napit) {
+                b.setText("");
+                b.setEnabled(true);
+                b.setBackground(Color.PINK);
             }
             teksti.setText("Pelaaja: " + pelaaja.getNimi()
                     + "\nPisteet: " + pelaaja.getPisteet()
@@ -114,11 +105,23 @@ public class Kuuntelija implements ActionListener {
             klikkaukset++;
 
             if (klikkaukset == 1) {
+                
+                if (huti) {
+                    nappi1.setText("");
+                    nappi2.setText("");
+                    nappi1.setBackground(Color.PINK);
+                    nappi2.setBackground(Color.PINK);
+                }
+                
+                huti = false;
+                
                 ekaKortti = Integer.parseInt(ae.getActionCommand());
                 Object source = ae.getSource();
                 if (source instanceof JButton) {
                     JButton b = (JButton) source;
                     nappi1 = b;
+                    nappi1.setText(muistipeli.naytaKortti(ekaKortti));
+                    nappi.setBackground(Color.GREEN);
                 }
 
             }
@@ -130,18 +133,24 @@ public class Kuuntelija implements ActionListener {
                 if (source instanceof JButton) {
                     JButton b = (JButton) source;
                     nappi2 = b;
+                    nappi2.setText(muistipeli.naytaKortti(tokaKortti));
+                    nappi2.setBackground(Color.GREEN);
                 }
 
+                ekaKirjain = muistipeli.naytaKortti(ekaKortti);
+                tokaKirjain = muistipeli.naytaKortti(tokaKortti);
                 String kortit = muistipeli.naytaKortit(ekaKortti, tokaKortti);
 
                 if (muistipeli.kaannaKortit(ekaKortti, tokaKortti) == true) {
 
                     nappi1.setEnabled(false);
+                    nappi1.setText(ekaKirjain);
+                    nappi1.setBackground(Color.GRAY);
                     napit.add(nappi1);
-                    nappi1.setText("");
                     nappi2.setEnabled(false);
+                    nappi2.setText(tokaKirjain);
+                    nappi2.setBackground(Color.GRAY);
                     napit.add(nappi2);
-                    nappi2.setText("");
                     teksti.setText("Pelaaja:" + pelaaja.getNimi()
                             + "\nPisteet: " + pelaaja.getPisteet()
                             + "\n\nLöydetyt kirjaimet: \n"
@@ -155,6 +164,7 @@ public class Kuuntelija implements ActionListener {
                             + muistipeli.naytaKortit(ekaKortti, tokaKortti)
                             + "\n\n"
                             + "Harmi, paria ei löytynyt ja sait yhden miinuspisteen.");
+                    huti = true;
                 }
 
                 klikkaukset = 0;
@@ -167,6 +177,7 @@ public class Kuuntelija implements ActionListener {
                     uusiPeli.addActionListener(this);
                     uusiPeli.setActionCommand("101");
                     uusiPeli.setVisible(true);
+                    
 
                 }
             }
