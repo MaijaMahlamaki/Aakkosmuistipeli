@@ -20,4 +20,4 @@ ja "hudista" yhden miinuspisteen. Peräkkäisten parien löytämisestä saa bonu
 [pit](https://htmlpreview.github.io/?https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Dokumentaatio/pit/201610141011/index.html)
 
 ###Checkstyle-raportti
-[checkstyle](http://htmlpreview.github.io/?https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Muistipeli/checkstyle.xml)
+[checkstyle](https://htmlpreview.github.io/?https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Dokumentaatio/checkstyle.html)
