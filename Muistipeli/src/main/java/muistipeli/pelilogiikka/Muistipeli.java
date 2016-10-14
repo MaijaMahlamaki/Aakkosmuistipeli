@@ -9,20 +9,18 @@ import muistipeli.pelaaja.Pelaaja;
  * tarkistamiseen.
  *
  */
-
 public class Muistipeli {
 
     private Pelaaja pelaaja;
     private Pelilauta pelilauta;
     private int parienLkm;
 
-    
     /**
-     * Muistipelin konstruktorille annetaan parametrina pelaaja, ja 
-     * konstruktori luo uuden pelilaudan. Parien lukumääärä alustetaan 
-     * kahdeksaan kappaleeseen pelin päättymisen tarkistusta varten.
-     * 
-     * @param pelaaja 
+     * Muistipelin konstruktorille annetaan parametrina pelaaja, ja konstruktori
+     * luo uuden pelilaudan. Parien lukumääärä alustetaan kahdeksaan
+     * kappaleeseen pelin päättymisen tarkistusta varten.
+     *
+     * @param pelaaja uusi pelaaja
      */
     public Muistipeli(Pelaaja pelaaja) {
         this.pelaaja = pelaaja;
@@ -77,12 +75,13 @@ public class Muistipeli {
         }
 
     }
-    
+
     /**
      * Metodi palauttaa yksittäisen kortin kirjaimen.
-     * @param kortti
+     *
+     * @param kortti kortin indeksi
      * @return yksittäisen kortin kirjain
-     * @see muistipeli.pelilogiikka.Pelilauta#kortinKirjain(int) 
+     * @see muistipeli.pelilogiikka.Pelilauta#kortinKirjain(int)
      */
     public String naytaKortti(int kortti) {
         return pelilauta.kortinKirjain(kortti);
@@ -101,9 +100,6 @@ public class Muistipeli {
      * @see muistipeli.pelilogiikka.Pelilauta#kortinKirjain(int).
      *     
 */
-    
-            
-            
     public String naytaKortit(int kortti1, int kortti2) {
         String kortit = this.pelilauta.kortinKirjain(kortti1)
                 + " ja " + this.pelilauta.kortinKirjain(kortti2);

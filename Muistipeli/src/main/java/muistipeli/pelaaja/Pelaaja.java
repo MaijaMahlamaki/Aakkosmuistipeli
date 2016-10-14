@@ -16,12 +16,14 @@ public class Pelaaja {
     private int kierrokset;
     private int yhteispisteet;
     private double keskiarvo;
-/**
- * Pelaaja saa konstruktorin parametrina pelaajan nimen. 
- * Konstruktorissa asetetaan pisteet, bonuspisteet, kierrokset, yhteispisteet ja
- * kierrosten pisteiden keskiarvo alkamaan nollasta.
- * @param nimi 
- */
+
+    /**
+     * Pelaaja saa konstruktorin parametrina pelaajan nimen. Konstruktorissa
+     * asetetaan pisteet, bonuspisteet, kierrokset, yhteispisteet ja kierrosten
+     * pisteiden keskiarvo alkamaan nollasta.
+     *
+     * @param nimi pelaajan nimi
+     */
     public Pelaaja(String nimi) {
         this.nimi = nimi;
         this.pisteet = 0;
@@ -68,6 +70,7 @@ public class Pelaaja {
 
     /**
      * Metodi palauttaa pelaajan pelin aikana keräämien bonuspisteiden määrän.
+     *
      * @return bonuspisteet
      */
     public int bonuspisteet() {
@@ -94,8 +97,7 @@ public class Pelaaja {
                     + "\nPelatut kierrokset: " + kierrokset
                     + "\nYhteispisteet: " + yhteispisteet
                     + "\nPisteiden keskiarvo: " + keskiArvo();
-        }
-        else if (pisteet > 2 && bonuspisteet > 2) {
+        } else if (pisteet > 2 && bonuspisteet > 2) {
             viesti = "Hieno suoritus " + nimi + ", olet varsin etevä muistaja!"
                     + "\nKeräsit " + pisteet
                     + " pistettä ja " + bonuspisteet
@@ -103,16 +105,14 @@ public class Pelaaja {
                     + "\nPelatut kierrokset: " + kierrokset
                     + "\nYhteispisteet: " + yhteispisteet
                     + "\nPisteiden keskiarvo: " + keskiArvo();
-        }
-        else if (pisteet < 0 && bonuspisteet > 2) {
+        } else if (pisteet < 0 && bonuspisteet > 2) {
             viesti = "Hyvä " + nimi + ", löysit kaikki parit!"
                     + "\nPistesaldosi ei tällä kertaa ihan yltänyt plussan puolelle, sait yhteensä "
                     + pisteet + " pistettä, mutta keräsit kuitenkin " + bonuspisteet + " bonuspistettä."
                     + "\nPelatut kierrokset: " + kierrokset
                     + "\nYhteispisteet: " + yhteispisteet
                     + "\nPisteiden keskiarvo: " + keskiArvo();
-        }
-        else if (pisteet < 0 && bonuspisteet == 2) {
+        } else if (pisteet < 0 && bonuspisteet == 2) {
             viesti = "Hyvä " + nimi + ", löysit kaikki parit!"
                     + "\nPistesaldosi ei tällä kertaa ihan yltänyt plussan puolelle, sait yhteensä "
                     + pisteet + " pistettä ja "
@@ -136,9 +136,9 @@ public class Pelaaja {
         this.kierrokset = this.kierrokset + 1;
     }
 
-    
     /**
      * Metodi palauttaa pelaajan pelaamien kierrosten lukumäärän.
+     *
      * @return kierrosten lukumäärä
      */
     public int kierrokset() {
@@ -147,6 +147,7 @@ public class Pelaaja {
 
     /**
      * Metodi palauttaa kaikkien pelaajan pelaamien kierrosten pisteiden summan.
+     *
      * @return yhteispisteet
      */
     public int yhteisPisteet() {

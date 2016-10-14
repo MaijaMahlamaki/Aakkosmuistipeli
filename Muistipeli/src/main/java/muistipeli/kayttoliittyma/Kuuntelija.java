@@ -52,6 +52,7 @@ public class Kuuntelija implements ActionListener {
      * @param pelaajanLisays lisää pelaajan
      * @param pelaajanNimi plaaja kirjoittaa nimensä kenttään
      * @param ylaosa ylapaneeli, jossa näytetään käyttäjälle tietoa
+     * @param napit korttinapit
      */
     public Kuuntelija(JTextArea teksti, JButton pelaajanLisays, JTextField pelaajanNimi, JPanel ylaosa, ArrayList napit) {
         this.teksti = teksti;
