@@ -11,4 +11,6 @@ Päivä | Tunnit | Kuvaus
 05.10.2016 | 4h | Uuden pelin aloittamisen mahdollisuus edellisen perään, kumuloituvan pistelaskun toteuttaminen. Testien kirjoittaminen.
 06.10.2016 | 6h | Testien kirjoittaminen, javadocin konfigurointi checkstyleen, checkstylen javadoc-virheiden korjaus ja uuden raportin luonti, sekvenssikaavioiden luonnostelu, aihemäärittelyn päivitys.
 06.10.2016 | 2h | Koodikatselmointi
-
+13.10.2016 | 6h | Demotilaisuus, jar-tiedoston luonti, käyttöliittymän ja pistelaskun parantelua, testien kirjoittamista ja korjaamista
+14.10.1016 | 3h | Luokkakaavion ja rakennekuvauksen päivitys, käyttöohjeen kirjoittaminen, uusien pit- ja checkstyleraporttien luonti ja virheiden korjaus
+ 
