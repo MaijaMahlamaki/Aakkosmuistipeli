@@ -17,7 +17,7 @@ ja "hudista" yhden miinuspisteen. Peräkkäisten parien löytämisestä saa bonu
 ![Luokkakaavio](http://yuml.me/1c0f24d5 "Luokkakaavio")
 
 ###Pit-raportti
-[pit](http://htmlpreview.github.io/?https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Muistipeli/target/pit-reports/201610141011/index.html)
+[pit](https://htmlpreview.github.io/?https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Dokumentaatio/pit/201610141011/index.html)
 
 ###Checkstyle-raportti
 [checkstyle](http://htmlpreview.github.io/?https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Muistipeli/checkstyle.xml)
