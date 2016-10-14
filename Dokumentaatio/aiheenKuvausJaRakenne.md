@@ -23,24 +23,24 @@ löytää vielä kolmannenkin parin, hän saa jälleen kaksi bonuspistettä jne.
 * Kun pelaaja on löytänyt kaikki parit, peli päättyy ja pelaaja saa nähdä pisteensä näytöllä.
 Peli päätösviestissä pelaaja saa myös sanallisen arvion taidoistaan kyseisellä kierroksella.
 * Halutessaan pelaaja voi aloittaa uuden pelin edellisen päätyttyä klikkaamalla 
-"Aloita uusi peli"-painiketta.
+"Uusi peli"-painiketta.
 * Jos pelaaja pelaa saman session aikana useamman pelin, hänelle ilmoitetaan jokaisen kierroksen 
 päätteeksi paneelin yläreunassa, montako kierrosta pelaaja on pelannut, paljonko pisteitä hän
 on kerännyt kaikilla kierroksilla yhteensä ja mikä on kierrosten pisteiden keskiarvo
 (pisteet eivät kuitenkaan tallennu pysyvästi, vaan ne katoavat, kun peli suljetaan).
 
-##Rakenne ja toiminta
+##Pelin toiminta ja rakenne
 
 Peli toimii graafisella käyttöliittymällä.
-
 Kun peli käynnistyy, näytön yläreunaan ilmestyy ohjeet ja kenttä, johon pelaaja syöttää nimensä.
 Kun pelaaja on syöttänyt nimensä ja klikannut "Aloita peli" -painiketta, peli voi alkaa.
 Yläreunan infolaatikossa pelaaja näkee koko pelin ajan nimensä ja pisteensä.
 
-Kun pelaaja klikkaa kahta korttia, tapahtumakuuntelija välittää pelilogiikalle viestin, mitä kortteja klikattiin,
-ja pelilogiikka tarkistaa, löytyikö parit vai ei ja kirjaa pisteet pelaajalle sen mukaan (pari +2, huti -1).
-Pelilogiikka tarkistaa myös mahdolliset bonuspisteet. Se kirjaa kaksi bonuspistettä, jos pelaaja on löytänyt 
-parit peräkkäin, eli mikäli nyt annetut pisteet ja edelliset pisteet ovat molemmat kakkosia. 
+Kun pelaaja klikkaa kahta korttia, tapahtumakuuntelija välittää pelilogiikalle viestin, mitä
+kortteja klikattiin, ja pelilogiikka tarkistaa, löytyikö parit vai ei ja kirjaa pisteet pelaajalle sen mukaan 
+(pari +2, huti -1).
+Pelilogiikka tarkistaa myös mahdolliset bonuspisteet. Pelaajalle  kirjataan kaksi bonuspistettä, jos pelaaja 
+on löytänyt parit peräkkäin, eli mikäli nyt annetut pisteet ja edelliset pisteet ovat molemmat kakkosia. 
 Pelilogiikka  palauttaa viestin kuuntelijalle, löytyikö parit vai ei, ja mitkä kortit käännettiin.
 Yläreunan näkymässä näytetään pelaajalle, mitkä kortit hän avasi ja onnistuiko hän löytämään parit vai ei.
 Jos parit löytyivät, kyseiset kortit muuttuvat harmaiksi, eikä niitä voi enää klikata.
@@ -51,9 +51,16 @@ infolaatikkoon pelilogiikassa pisteiden mukaan räätälöidyn loppuviestin, sek
 Kuuntelija asettaa myös "Aloita uusi peli" -painikkeen yläreunan infolaatikkoon, jota klikkaamalla pelaaja voi
 aloittaa uuden pelin. Uusi peli aloitetaan siis  tapahtumakuuntelijaan oliomuuttujaksi talletetulla pelaajalla,
 eikä pelaajan tarvitse enää kirjoittaa nimeään uudestaan.
-
 Kun pelejä pelataan useita peräkkäin, pelilogiikka pitää kirjaa pelatuista kierroksista; niiden lukumäärästä,
 yhteispisteistä ja kierrosten pisteiden keskiarvosta. 
+
+Ohjelman rakenne on sellainen, että graafinen käyttöliittymäluokka tuntee vain kuuntelijan, muttei muita luokkia. 
+Kuuntelija taas on yhteydessä pelaajaluokkaan, jossa hoidetaan kaikki pistelasku ja muodostetaan pelaajalle loppuviesti.
+Lisäksi kuuntelija hyödyntää muistipelin metodeja pelin aloittamiseen ja lopettamiseen sekä korttien tarkistukseen 
+ja niiden näyttämiseen pelaajalle. Koska pelaaja voi pelata monta peliä peräkkäin, yhtä pelaajaoliota kohden 
+voi olla monta muistipelioliota. Siten myös yhtä kuuntelijaoliota kohden voi olla monta muistipelioliota.
+Ainoastaan muistipeliluokka tuntee pelilautaluokan, jossa luodaan peliä varten sekoitettu korttilista. 
+Vastaavasti ainoastaan pelilautaluokka tuntee korttiluokan, jonka olioista korttilista luodaan.
 
 **Luokkakaavio**
 

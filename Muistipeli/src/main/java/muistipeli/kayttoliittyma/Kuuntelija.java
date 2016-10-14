@@ -58,7 +58,7 @@ public class Kuuntelija implements ActionListener {
         this.pelaajanLisays = pelaajanLisays;
         this.pelaajanNimi = pelaajanNimi;
         this.ylaosa = ylaosa;
-        this.uusiPeli = new JButton("Aloita uusi Peli");
+        this.uusiPeli = new JButton("Uusi peli");
         this.napit = new ArrayList<>();
         this.huti = false;
 
