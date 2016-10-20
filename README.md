@@ -9,6 +9,7 @@ ja "hudista" yhden miinuspisteen. Peräkkäisten parien löytämisestä saa bonu
 
 ###Aihe ja rakenne
 [Aiheen ja ohjelman rakenteen kuvaus](Dokumentaatio/aiheenKuvausJaRakenne.md)
+
 [Käyttöohje](Dokumentaatio/kayttohje.md)
 
 ###Tuntikirjanpito
