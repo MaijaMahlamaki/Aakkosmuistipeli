@@ -64,7 +64,7 @@ Vastaavasti ainoastaan pelilautaluokka tuntee korttiluokan, jonka olioista kortt
 
 **Luokkakaavio**
 
-![luokkakaavio](http://yuml.me/b3310b22)
+![luokkakaavio](http://yuml.me/1c0f24d5)
 
 **Sekvenssikaavioita**
 
