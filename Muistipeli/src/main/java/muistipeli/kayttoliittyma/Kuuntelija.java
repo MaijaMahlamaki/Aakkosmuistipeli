@@ -41,13 +41,13 @@ public class Kuuntelija implements ActionListener {
     private boolean huti;
 
     /**
-     * Kuuntelija saa konstruktorin parametreinä paneelin yläosan ja siihen 
-     * kuuluvat elementit; tekstikentän, nimensyöttöön tarkoitetun kentän, 
-     * pelaajan lisäysnapin, sekä liudan korttinappeja.
-     * Konstruktorissa alustetaan myös uuden pelin aloittamiseen tarkoitettu
-     * nappi ja ArrayList, johon napit kerätään pelin aikana, jotta ne saadaan
-     * uuden pelin aloituksen yhteydessä asetettua jälleen painettaviksi kätevästi.
-     *  
+     * Kuuntelija saa konstruktorin parametreinä paneelin yläosan ja siihen
+     * kuuluvat elementit; tekstikentän, nimensyöttöön tarkoitetun kentän,
+     * pelaajan lisäysnapin, sekä liudan korttinappeja. Konstruktorissa
+     * alustetaan myös uuden pelin aloittamiseen tarkoitettu nappi ja ArrayList,
+     * johon napit kerätään pelin aikana, jotta ne saadaan uuden pelin
+     * aloituksen yhteydessä asetettua jälleen painettaviksi kätevästi.
+     *
      * @param teksti infoaa käyttäjää
      * @param pelaajanLisays lisää pelaajan
      * @param pelaajanNimi plaaja kirjoittaa nimensä kenttään
@@ -65,7 +65,6 @@ public class Kuuntelija implements ActionListener {
 
     }
 
-    
     @Override
     public void actionPerformed(ActionEvent ae) {
 
@@ -107,20 +106,22 @@ public class Kuuntelija implements ActionListener {
 
             if (klikkaukset == 1) {
                 
+
                 if (huti) {
                     nappi1.setText("");
                     nappi2.setText("");
                     nappi1.setBackground(Color.PINK);
                     nappi2.setBackground(Color.PINK);
                 }
-                
+
                 huti = false;
-                
+
                 ekaKortti = Integer.parseInt(ae.getActionCommand());
                 Object source = ae.getSource();
                 if (source instanceof JButton) {
                     JButton b = (JButton) source;
                     nappi1 = b;
+                    nappi1.setEnabled(false);
                     nappi1.setText(muistipeli.naytaKortti(ekaKortti));
                     nappi.setBackground(Color.GREEN);
                 }
@@ -134,6 +135,7 @@ public class Kuuntelija implements ActionListener {
                 if (source instanceof JButton) {
                     JButton b = (JButton) source;
                     nappi2 = b;
+                    nappi2.setEnabled(false);
                     nappi2.setText(muistipeli.naytaKortti(tokaKortti));
                     nappi2.setBackground(Color.GREEN);
                 }
@@ -166,6 +168,8 @@ public class Kuuntelija implements ActionListener {
                             + "\n\n"
                             + "Harmi, paria ei löytynyt ja sait yhden miinuspisteen.");
                     huti = true;
+                    nappi1.setEnabled(true);
+                    nappi2.setEnabled(true);
                 }
 
                 klikkaukset = 0;
@@ -178,7 +182,6 @@ public class Kuuntelija implements ActionListener {
                     uusiPeli.addActionListener(this);
                     uusiPeli.setActionCommand("101");
                     uusiPeli.setVisible(true);
-                    
 
                 }
             }
