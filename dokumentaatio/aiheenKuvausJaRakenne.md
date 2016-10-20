@@ -68,6 +68,6 @@ Vastaavasti ainoastaan pelilautaluokka tuntee korttiluokan, jonka olioista kortt
 
 **Sekvenssikaavioita**
 
-![Pelin aloitus](https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Dokumentaatio/sekvenssikaaviot/pelinAloitus.jpg)
-![Korttien kääntäminen, ei paria](https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Dokumentaatio/sekvenssikaaviot/korttienKaantaminen1.jpg)
-![Korttien kääntäminen, pari löytyi](https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Dokumentaatio/sekvenssikaaviot/korttienKaantaminen2.jpg)
+![Pelin aloitus](https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/dokumentaatio/sekvenssikaaviot/pelinAloitus.jpg)
+![Korttien kääntäminen, ei paria](https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/dokumentaatio/sekvenssikaaviot/korttienKaantaminen1.jpg)
+![Korttien kääntäminen, pari löytyi](https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/dokumentaatio/sekvenssikaaviot/korttienKaantaminen2.jpg)
