@@ -8,16 +8,14 @@ ja "hudista" yhden miinuspisteen. Peräkkäisten parien löytämisestä saa bonu
 ##Dokumentaatio
 
 ###Aihe ja rakenne
-[Aiheen kuvaus](Dokumentaatio/aiheenKuvausJaRakenne.md)
+[Aiheen ja ohjelman rakenteen kuvaus](Dokumentaatio/aiheenKuvausJaRakenne.md)
+[Käyttöohje](Dokumentaatio/kayttohje.md)
 
 ###Tuntikirjanpito
 [Tuntikirjanpito](Dokumentaatio/tuntikirjanpito.md)
 
-###Luokkakaavio
-![Luokkakaavio](http://yuml.me/1c0f24d5 "Luokkakaavio")
+###Raportit
 
-###Pit-raportti
 [pit](https://htmlpreview.github.io/?https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Dokumentaatio/pit/201610141011/index.html)
 
-###Checkstyle-raportti
 [checkstyle](https://htmlpreview.github.io/?https://github.com/MaijaMahlamaki/Aakkosmuistipeli/blob/master/Dokumentaatio/checkstyle.html)
