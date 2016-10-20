@@ -13,4 +13,5 @@ Päivä | Tunnit | Kuvaus
 06.10.2016 | 2h | Koodikatselmointi
 13.10.2016 | 6h | Demotilaisuus, jar-tiedoston luonti, käyttöliittymän ja pistelaskun parantelua, testien kirjoittamista ja korjaamista
 14.10.1016 | 3h | Luokkakaavion ja rakennekuvauksen päivitys, käyttöohjeen kirjoittaminen, uusien pit- ja checkstyleraporttien luonti ja virheiden korjaus
- 
+20.10.2016 | 3h | Loppupalautustsekki: viimeiset korjaukset ohjelmaan, kansioiden päivitys, viimeisten pit ja checkstyle -raporttien luonti, jar-tiedoston toimivuuden varmistaminen jne.
+
