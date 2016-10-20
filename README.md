@@ -8,12 +8,12 @@ ja "hudista" yhden miinuspisteen. Peräkkäisten parien löytämisestä saa bonu
 ##Dokumentaatio
 
 ###Aihe ja rakenne
-[Aiheen ja ohjelman rakenteen kuvaus](Dokumentaatio/aiheenKuvausJaRakenne.md)
+[Aiheen ja ohjelman rakenteen kuvaus](dokumentaatio/aiheenKuvausJaRakenne.md)
 
-[Käyttöohje](Dokumentaatio/kayttohje.md)
+[Käyttöohje](dokumentaatio/kayttohje.md)
 
 ###Tuntikirjanpito
-[Tuntikirjanpito](Dokumentaatio/tuntikirjanpito.md)
+[Tuntikirjanpito](dokumentaatio/tuntikirjanpito.md)
 
 ###Raportit
 
